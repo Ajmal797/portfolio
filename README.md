@@ -1,19 +1,28 @@
-# Ajmal Abbas Portfolio — V3
+# Ajmal Abbas Portfolio — V5
 
-This version adds the first dedicated research case study:
+This package keeps the full V3 portfolio and marine case-study structure,
+but replaces the marine case-study hero with the cleaner version based on
+the approved screenshot.
 
-## Marine Ecosystem Emulator
-`marine-emulator.html`
+## Upload to GitHub
 
-The homepage Marine Ecosystem card now links to the case study.
+Upload everything in this folder to the root of your `portfolio` repository.
 
-### Case-study features
-- domain-specific deep-ocean scientific visual identity
-- real visuals rendered from the final thesis defense deck
-- dataset, methodology, AutoML, forecasting, spatial evaluation, and runtime sections
-- official thesis DOI link
-- Fay Lab profile link
-- MUST project context link
-- responsive desktop/mobile design
+Important:
+- keep `marine-assets/` as a folder
+- `marine-emulator.html` stays in the repository root
+- `marine.css` stays in the repository root
+- the homepage `index.html` already links the marine research card to `marine-emulator.html`
 
-Upload every file/folder in this package to the root of the GitHub `portfolio` repository.
+## Main files
+
+- index.html
+- styles.css
+- script.js
+- marine-emulator.html
+- marine.css
+- profile.jpg
+- Ajmal_Abbas_Resume.pdf
+- robots.txt
+- sitemap.xml
+- marine-assets/
