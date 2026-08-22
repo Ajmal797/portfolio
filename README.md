@@ -149,3 +149,12 @@ All research visuals on the case-study page are extracted from the uploaded IEEE
 - Removed surrounding conference headers/body text from the web images.
 - Fixed leaf samples, model-comparison table, Detectron2 architecture, and result images.
 - Added content-aware sizing so figures fit their sections without stretching or clipping.
+
+
+## Paddy visual redesign
+- Removed all embedded IEEE paper screenshots from the Paddy case-study page.
+- Rebuilt the visual storytelling with native HTML/CSS components:
+  disease cards, model comparison bars, Detectron2 pipeline visualization,
+  training-iteration chart, and detection concept graphic.
+- The page still uses the reported research values from the paper, but no longer
+  displays cropped paper-page images.

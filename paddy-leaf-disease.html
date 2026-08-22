@@ -129,10 +129,28 @@
       <div class="data-stat"><b>COCO JSON</b><span>Detectron2 annotation format</span></div>
     </div>
 
-    <figure class="paper-figure leaf-samples-figure">
-      <img src="paddy-assets/leaf-samples.jpg" alt="Sample rice crop leaf images from the IEEE paper" />
-      <figcaption>Sample paddy leaf images shown in the IEEE paper.</figcaption>
-    </figure>
+    <div class="disease-visual-grid">
+      <article class="leaf-card">
+        <div class="leaf-art brownspot"><span></span></div>
+        <b>Brown Spot</b>
+        <small>Visible lesion / spotting pattern</small>
+      </article>
+      <article class="leaf-card">
+        <div class="leaf-art hispa"><span></span></div>
+        <b>Hispa</b>
+        <small>Surface damage pattern</small>
+      </article>
+      <article class="leaf-card">
+        <div class="leaf-art blight"><span></span></div>
+        <b>Bacterial Blight</b>
+        <small>Leaf discoloration / lesion pattern</small>
+      </article>
+      <article class="leaf-card">
+        <div class="leaf-art blast"><span></span></div>
+        <b>Leaf Blast</b>
+        <small>Distinct disease pattern</small>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -159,10 +177,17 @@
       <article><span>EFFICIENT SCALING</span><h3>EfficientNet B3</h3><b>32%</b><small>50 epochs</small></article>
     </div>
 
-    <figure class="paper-figure table-figure">
-      <img src="paddy-assets/model-comparison-table.jpg" alt="Model performance comparison table from the IEEE paper" />
-      <figcaption>Model comparison table from the published paper.</figcaption>
-    </figure>
+    <div class="model-comparison-visual">
+      <div class="model-bar"><span>CNN</span><i style="--w:92%"></i><b>92%</b></div>
+      <div class="model-bar"><span>VGG16</span><i style="--w:76%"></i><b>76%</b></div>
+      <div class="model-bar"><span>MobileNetV2</span><i style="--w:91%"></i><b>91%</b></div>
+      <div class="model-bar"><span>ResNet50</span><i style="--w:50%"></i><b>50%</b></div>
+      <div class="model-bar"><span>InceptionV3</span><i style="--w:80%"></i><b>80%</b></div>
+      <div class="model-bar"><span>DenseNet121</span><i style="--w:92%"></i><b>92%</b></div>
+      <div class="model-bar"><span>Xception</span><i style="--w:92%"></i><b>92%</b></div>
+      <div class="model-bar"><span>DenseNet + Xception</span><i style="--w:91%"></i><b>91%</b></div>
+      <div class="model-bar"><span>EfficientNet B3</span><i style="--w:32%"></i><b>32%</b></div>
+    </div>
   </div>
 </section>
 
@@ -193,10 +218,23 @@
       </div>
     </div>
 
-    <figure class="paper-figure architecture-figure">
-      <img src="paddy-assets/detectron2-architecture.jpg" alt="Detectron2 architecture from the IEEE paper" />
-      <figcaption>Detectron2 architecture shown in the paper.</figcaption>
-    </figure>
+    <div class="detectron-visual">
+      <div class="cv-frame">
+        <div class="leaf-object"></div>
+        <div class="bbox"><span>disease region</span></div>
+      </div>
+      <div class="detectron-stack">
+        <article><span>01</span><b>ResNet-101 Backbone</b></article>
+        <i>↓</i>
+        <article><span>02</span><b>Feature Pyramid Network</b></article>
+        <i>↓</i>
+        <article><span>03</span><b>Region Proposal Network</b></article>
+        <i>↓</i>
+        <article><span>04</span><b>ROI Heads + Mask Head</b></article>
+        <i>↓</i>
+        <article class="final"><span>05</span><b>Disease Detection Output</b></article>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -218,21 +256,31 @@
       <article><span>BEST CNN BENCHMARK</span><b>92%</b><small>CNN / DenseNet121 / Xception at 50 epochs</small></article>
     </div>
 
-    <div class="result-gallery">
-      <figure class="paper-figure result-figure">
-        <img src="paddy-assets/detectron-training.jpg" alt="Detectron2 training phase from the IEEE paper" />
-        <figcaption>Detectron2 training-phase example from the paper.</figcaption>
-      </figure>
+    <div class="result-gallery-visual">
+      <article class="result-visual-card">
+        <span>TRAINING PROGRESSION</span>
+        <div class="iter-bars">
+          <div><b>2,000</b><i style="--h:90%"></i><small>90%</small></div>
+          <div class="best"><b>3,000</b><i style="--h:97%"></i><small>97%</small></div>
+        </div>
+      </article>
 
-      <figure class="paper-figure result-figure">
-        <img src="paddy-assets/detectron-testing.jpg" alt="Detectron2 testing phase from the IEEE paper" />
-        <figcaption>Detectron2 testing-phase example from the paper.</figcaption>
-      </figure>
+      <article class="result-visual-card">
+        <span>DETECTION CONCEPT</span>
+        <div class="detection-demo">
+          <div class="demo-leaf"></div>
+          <div class="demo-box one">leaf disease</div>
+          <div class="demo-box two">region</div>
+        </div>
+      </article>
 
-      <figure class="paper-figure result-figure">
-        <img src="paddy-assets/detectron-image-quality.jpg" alt="Detectron2 result illustrating image-quality sensitivity" />
-        <figcaption>The paper notes that detection accuracy depends on image clarity.</figcaption>
-      </figure>
+      <article class="result-visual-card">
+        <span>KEY FINDING</span>
+        <div class="finding-ring">
+          <strong>+7 pts</strong>
+          <small>from 2,000 → 3,000 iterations</small>
+        </div>
+      </article>
     </div>
   </div>
 </section>
