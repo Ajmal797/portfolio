@@ -47,3 +47,12 @@ deep-ocean gradients, subtle bathymetric contour lines, ocean-current lighting,
 and alternating oceanographic section atmospheres.
 
 No research figure was replaced, edited, cropped, or regenerated.
+
+
+## V10 final marine-page polish
+- Preserved all 8 original thesis/research figures.
+- Removed only the small UMass corner banners and slide-number boxes from the screenshots.
+- Reduced the workflow figure's visual dominance.
+- Improved spacing in the forecasting section.
+- Slightly strengthened the bathymetric/ocean-current background treatment.
+- No generated replacement research graphics were used.
