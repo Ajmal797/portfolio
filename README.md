@@ -102,3 +102,19 @@ The case study covers:
 - Strengthened the state-policy / government intelligence background.
 - Preserved the real Langflow workflow screenshot.
 - No generated replacement images were used.
+
+
+## VulStyle cybersecurity case study
+Added a complete VulStyle research case study grounded in the uploaded arXiv/DSN 2026 paper.
+
+New files:
+- vulstyle.html
+- vulstyle.css
+- vulstyle-assets/vulstyle-approach.jpg
+- vulstyle-assets/cpp-ast.jpg
+
+Integration:
+- Main portfolio Vulnerability Detection card links to vulstyle.html.
+- Main publication card for VulStyle links to the case study.
+- Publication status updated to IEEE/IFIP DSN 2026 · Accepted.
+- Research figures are extracted directly from the uploaded paper; no generated research images are used.

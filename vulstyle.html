@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VulStyle | Ajmal Abbas</title>
+  <meta name="description" content="VulStyle case study — multi-modal pre-training for code stylometry-augmented software vulnerability detection, accepted at IEEE/IFIP DSN 2026.">
+  <meta name="author" content="Ajmal Abbas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/vulstyle.html">
+  <link rel="stylesheet" href="vulstyle.css">
+</head>
+<body>
+
+<header class="vs-nav">
+  <div class="vs-container nav-inner">
+    <a class="brand" href="index.html"><span>AA</span>Ajmal Abbas</a>
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#approach">Approach</a>
+      <a href="#modalities">Modalities</a>
+      <a href="#results">Results</a>
+      <a href="#ablation">Ablation</a>
+      <a href="#security">Security</a>
+      <a href="#publication">Publication</a>
+      <a class="portfolio-link" href="index.html">← Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="vs-hero">
+  <div class="code-rain" aria-hidden="true">
+    <span>{ }</span><span>&lt;/&gt;</span><span>AST</span><span>0x7F</span><span>if()</span><span>ptr*</span>
+    <span>MLM</span><span>return</span><span>while</span><span>CVE</span><span>01</span><span>10</span>
+  </div>
+
+  <div class="vs-container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">CYBERSECURITY ML · CODE INTELLIGENCE · TRANSFORMERS · DSN 2026</div>
+
+      <h1>Vul<span>Style</span></h1>
+      <h2>Multi-Modal Pre-Training for Code Stylometry-Augmented Vulnerability Detection</h2>
+
+      <p>
+        A software vulnerability detection model that jointly learns from source-code tokens,
+        reduced non-terminal AST structure, and code-stylometry signals to capture not only
+        what code says, but how it is written.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="https://arxiv.org/abs/2604.26313" target="_blank" rel="noopener">Read Paper ↗</a>
+        <a class="btn" href="#results">Explore Results ↓</a>
+        <a class="btn" href="index.html">← Portfolio</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="panel-row">
+        <div class="panel-icon">&lt;/&gt;</div>
+        <div><span>MODEL</span><strong>RoBERTaBASE</strong><small>125M parameters · 12 encoder layers · 768 hidden dimension</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">AST</div>
+        <div><span>STRUCTURE</span><strong>Reduced Non-Terminal AST</strong><small>Preserves hierarchy while reducing structural overhead</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">CS</div>
+        <div><span>STYLE SIGNAL</span><strong>CStyle Features</strong><small>Statements · expressions · types · declarations</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">✓</div>
+        <div><span>PUBLICATION</span><strong>IEEE/IFIP DSN 2026</strong><small>Accepted research · co-author</small></div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="vs-container hero-metrics">
+    <div><b>4.9M</b><span>Pre-Training Functions</span></div>
+    <div><b>7</b><span>Programming Languages</span></div>
+    <div><b>5</b><span>Vulnerability Benchmarks</span></div>
+    <div><b>95.06%</b><span>BigVul F1</span></div>
+    <div><b>97.76%</b><span>VulDeePecker F1</span></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="vs-section problem-section">
+  <div class="vs-container two-col">
+    <div>
+      <div class="section-index">01 · THE PROBLEM</div>
+      <h2>Token-only code models can miss the habits and structure behind risky implementations.</h2>
+      <p class="section-copy">
+        Existing vulnerability detectors often emphasize lexical tokens or expensive full program structures.
+        VulStyle asks whether lightweight structural hierarchy and developer-style signals can complement
+        token semantics and improve function-level vulnerability detection.
+      </p>
+    </div>
+
+    <div class="problem-visual">
+      <div class="code-window">
+        <div class="window-top"><i></i><i></i><i></i><span>unsafe_buffer.c</span></div>
+        <pre><code><em>char</em> *copy(char *src) {
+  char buf[16];
+  <strong>strcpy(buf, src);</strong>
+  if (ptr != NULL) {
+    return process(ptr);
+  }
+}</code></pre>
+      </div>
+
+      <div class="signal-stack">
+        <article><span>TOKENS</span><b>What appears</b></article>
+        <article><span>AST</span><b>How it is structured</b></article>
+        <article><span>CSTYLE</span><b>How it is written</b></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODALITIES -->
+<section id="modalities" class="vs-section modality-section">
+  <div class="vs-container">
+    <div class="section-index">02 · MULTI-MODAL CODE REPRESENTATION</div>
+    <div class="heading-row">
+      <h2>Three signals. One vulnerability representation.</h2>
+      <p>
+        Each modality captures a different aspect of program behavior, making structure and stylometry
+        complementary rather than interchangeable.
+      </p>
+    </div>
+
+    <div class="modality-grid">
+      <article class="token">
+        <div class="modality-icon">&lt;/&gt;</div>
+        <span>MODALITY 01</span>
+        <h3>Function-Level Code</h3>
+        <p>Lexical and local syntactic information expressed through the token sequence.</p>
+      </article>
+
+      <article class="ast">
+        <div class="modality-icon">⌘</div>
+        <span>MODALITY 02</span>
+        <h3>Non-Terminal AST Nodes</h3>
+        <p>Structural hierarchy without the redundancy and cost of a complete flattened AST.</p>
+      </article>
+
+      <article class="style">
+        <div class="modality-icon">Aa</div>
+        <span>MODALITY 03</span>
+        <h3>Code Stylometry</h3>
+        <p>Statements, expressions, types, declarations, naming tendencies, and recurring implementation habits.</p>
+      </article>
+    </div>
+
+    <div class="fusion-strip">
+      <span>FUNCTION TOKENS</span><i>+</i><span>REDUCED AST</span><i>+</i><span>CSTYLE</span>
+      <b>→</b><strong>MULTI-MODAL VULNERABILITY REPRESENTATION</strong>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach" class="vs-section approach-section">
+  <div class="vs-container">
+    <div class="section-index">03 · VULSTYLE APPROACH</div>
+    <div class="heading-row">
+      <h2>Pre-train broadly. Fine-tune with vulnerability-aware style signals.</h2>
+      <p>
+        VulStyle uses self-supervised masked-language pre-training and then augments labeled
+        vulnerability functions with CStyle features during downstream fine-tuning.
+      </p>
+    </div>
+
+    <figure class="paper-figure approach-figure">
+      <img src="vulstyle-assets/vulstyle-approach.jpg" alt="VulStyle pre-training and fine-tuning workflow from the paper">
+      <figcaption>Figure 1 from the VulStyle paper: pre-training and fine-tuning workflow.</figcaption>
+    </figure>
+
+    <div class="phase-grid">
+      <article>
+        <span>PRE-TRAINING</span>
+        <h3>Code + Reduced AST</h3>
+        <p>Functions are parsed with Clang, non-terminal AST nodes are serialized, and the combined sequences train a RoBERTaBASE model using masked language modeling.</p>
+      </article>
+      <article>
+        <span>FINE-TUNING</span>
+        <h3>Code + CStyle Features</h3>
+        <p>Vulnerable and non-vulnerable functions are enriched with extracted stylometric features before sequence classification.</p>
+      </article>
+      <article>
+        <span>OUTPUT</span>
+        <h3>Binary Vulnerability Detection</h3>
+        <p>A classifier predicts whether a function is vulnerable or non-vulnerable.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AST -->
+<section class="vs-section ast-section">
+  <div class="vs-container two-col ast-layout">
+    <div>
+      <div class="section-index">04 · REDUCED AST + CSTYLE</div>
+      <h2>Keep the hierarchy. Drop redundant leaf structure.</h2>
+      <p class="section-copy">
+        Instead of flattening the full AST, VulStyle retains non-terminal nodes to represent hierarchy
+        more efficiently. During fine-tuning, selected syntactic and lexical nodes become CStyle features.
+      </p>
+
+      <div class="feature-chips">
+        <span>IfStatement</span><span>ReturnStatement</span><span>BinaryOperation</span>
+        <span>PointerType</span><span>MethodDeclaration</span><span>VariableDeclarator</span>
+      </div>
+
+      <div class="ast-benefits">
+        <article><b>Reduced complexity</b><span>Fewer redundant AST tokens</span></article>
+        <article><b>Structural grounding</b><span>Preserves program hierarchy</span></article>
+        <article><b>Style awareness</b><span>Captures recurring coding tendencies</span></article>
+      </div>
+    </div>
+
+    <figure class="paper-figure">
+      <img src="vulstyle-assets/cpp-ast.jpg" alt="C++ program and corresponding AST used to illustrate VulStyle features">
+      <figcaption>Figure 2 from the paper: C++ function, lexical/syntactic features, and non-terminal AST structure.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRETRAINING -->
+<section class="vs-section training-section">
+  <div class="vs-container">
+    <div class="section-index">05 · PRE-TRAINING AT SCALE</div>
+    <h2>Learning general code structure from millions of functions.</h2>
+
+    <div class="training-metrics">
+      <article><b>4.9M</b><span>functions</span></article>
+      <article><b>50K</b><span>BPE vocabulary</span></article>
+      <article><b>512</b><span>pre-training sequence length</span></article>
+      <article><b>536,317</b><span>training steps</span></article>
+      <article><b>2 days</b><span>pre-training duration</span></article>
+      <article><b>A100 80GB</b><span>GPU</span></article>
+    </div>
+
+    <div class="dataset-flow">
+      <div><span>CodeSearchNet</span><b>2.28M+</b></div>
+      <i>+</i>
+      <div><span>VulBERTa</span><b>2.28M+</b></div>
+      <i>+</i>
+      <div><span>DiverseVul</span><b>330K+</b></div>
+      <i>+</i>
+      <div><span>BigVul</span><b>217K+</b></div>
+      <strong>→ RoBERTa MLM Pre-Training</strong>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" class="vs-section results-section">
+  <div class="vs-container">
+    <div class="section-index">06 · BENCHMARK RESULTS</div>
+    <div class="heading-row">
+      <h2>Strong performance across five vulnerability benchmarks.</h2>
+      <p>
+        VulStyle achieved state-of-the-art results on BigVul and VulDeePecker and competitive
+        or best-average performance across the broader benchmark suite.
+      </p>
+    </div>
+
+    <div class="result-cards">
+      <article class="best">
+        <span>BIGVUL</span><strong>95.06%</strong><b>F1</b><small>99.69% accuracy</small>
+      </article>
+      <article class="best">
+        <span>VULDEEPECKER</span><strong>97.76%</strong><b>F1</b><small>99.25% accuracy</small>
+      </article>
+      <article>
+        <span>DEVIGN</span><strong>62.25%</strong><b>F1</b><small>65.37% accuracy</small>
+      </article>
+      <article>
+        <span>REVEAL</span><strong>45.27%</strong><b>F1</b><small>85.22% accuracy</small>
+      </article>
+      <article>
+        <span>DIVERSEVUL</span><strong>31.20%</strong><b>F1</b><small>88.41% accuracy</small>
+      </article>
+    </div>
+
+    <div class="comparison-panel">
+      <div>
+        <span>BIGVUL F1 COMPARISON</span>
+        <h3>VulStyle vs. strong baselines</h3>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><b>VulStyle</b><i style="--w:95.06%"></i><strong>95.06</strong></div>
+        <div class="bar-row"><b>LineVul</b><i style="--w:91%"></i><strong>91.00</strong></div>
+        <div class="bar-row"><b>UniXcoder</b><i style="--w:89.06%"></i><strong>89.06</strong></div>
+        <div class="bar-row"><b>CodeBERT</b><i style="--w:83.83%"></i><strong>83.83</strong></div>
+        <div class="bar-row"><b>VulBERTa-MLP</b><i style="--w:47.01%"></i><strong>47.01</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABLATION -->
+<section id="ablation" class="vs-section ablation-section">
+  <div class="vs-container">
+    <div class="section-index">07 · ABLATION STUDY</div>
+    <div class="heading-row">
+      <h2>The gain comes from the combination—not one modality alone.</h2>
+      <p>
+        On BigVul, reduced AST structure and CStyle each improve the token-only baseline,
+        but the full multi-modal model delivers the largest increase.
+      </p>
+    </div>
+
+    <div class="ablation-chart">
+      <article style="--score:47.06"><span>Token Baseline</span><div><i></i></div><b>47.06%</b><small>Weak generalization</small></article>
+      <article style="--score:58.55"><span>+ AST Only</span><div><i></i></div><b>58.55%</b><small>Structure helps</small></article>
+      <article style="--score:61.02"><span>+ CStyle Only</span><div><i></i></div><b>61.02%</b><small>Style detects behavior</small></article>
+      <article class="full" style="--score:95.06"><span>AST + CStyle</span><div><i></i></div><b>95.06%</b><small>Full VulStyle</small></article>
+    </div>
+
+    <div class="ablation-takeaway">
+      <div class="synergy">AST</div><span>+</span><div class="synergy">CStyle</div><span>+</span><div class="synergy">Tokens</div><b>→ complementary signals</b>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security" class="vs-section security-section">
+  <div class="vs-container">
+    <div class="section-index">08 · THREAT MODEL & SECURITY CONTEXT</div>
+    <div class="heading-row">
+      <h2>Designed around attacker-realistic code changes.</h2>
+      <p>
+        The threat model considers vulnerable functions entering a codebase through patches,
+        pull requests, or supply-chain updates, with the defender aiming to flag unsafe contributions
+        early in CI/CD or pre-commit review.
+      </p>
+    </div>
+
+    <div class="security-flow">
+      <div class="attacker"><span>ATTACKER</span><b>Patch / PR / Dependency Update</b></div>
+      <i>→</i>
+      <div class="repo"><span>CODEBASE</span><b>New Function</b></div>
+      <i>→</i>
+      <div class="scanner"><span>VULSTYLE</span><b>Tokens + AST + Style</b></div>
+      <i>→</i>
+      <div class="defender"><span>DEFENDER</span><b>CI/CD Review</b></div>
+    </div>
+
+    <div class="scenario-grid">
+      <article class="success"><span>SUCCESS CASE</span><h3>Unsafe buffer handling</h3><p>Mixed naming patterns and nested unsafe blocks provide stylometric and structural cues that help flag a vulnerable function missed by token baselines.</p></article>
+      <article class="failure"><span>FAILURE CASE</span><h3>Semantic flaw with normal style</h3><p>Cryptographic misuse, integer overflow, or race conditions can remain difficult when the code looks stylistically normal.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- LIMITATIONS -->
+<section class="vs-section limitations-section">
+  <div class="vs-container">
+    <div class="section-index">09 · LIMITATIONS</div>
+    <h2>Benchmark strength does not remove real-world uncertainty.</h2>
+
+    <div class="limitations-grid">
+      <article><span>01</span><h3>Label noise</h3><p>Widely used vulnerability datasets can contain noisy or inconsistent labels, so absolute scores should be interpreted carefully.</p></article>
+      <article><span>02</span><h3>Function-level scope</h3><p>The current model does not represent inter-procedural data flow, global state, or cross-function dependencies.</p></article>
+      <article><span>03</span><h3>Uniform / generated style</h3><p>Stylometric signals weaken when code is auto-formatted, templated, or machine-generated.</p></article>
+      <article><span>04</span><h3>Deep semantic flaws</h3><p>Some vulnerabilities require stronger semantic, symbolic, or compiler-assisted reasoning beyond style and local structure.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication" class="vs-section publication-section">
+  <div class="vs-container publication-card">
+    <div>
+      <div class="section-index">10 · ACCEPTED RESEARCH</div>
+      <h2>VulStyle: A Multi-Modal Pre-Training for Code Stylometry-Augmented Vulnerability Detection</h2>
+      <p class="authors">Chidera Biringa · <strong>Ajmal Abbas</strong> · Vishnu Selvaraj · Gokhan Kul</p>
+      <div class="publication-meta">
+        <span>Accepted at the 56th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2026)</span>
+        <code>arXiv:2604.26313</code>
+      </div>
+    </div>
+
+    <a class="btn primary large" href="https://arxiv.org/abs/2604.26313" target="_blank" rel="noopener">Read Paper ↗</a>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="vs-container">
+    <div class="kicker">CYBERSECURITY ML · CODE REPRESENTATION · SOFTWARE SECURITY</div>
+    <h2>Building models that understand code beyond the token sequence.</h2>
+    <div class="hero-actions center">
+      <a class="btn primary" href="mailto:ajmalimra.a@gmail.com">Contact Ajmal</a>
+      <a class="btn" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="Ajmal_Abbas_Resume.pdf" target="_blank">Resume ↗</a>
+      <a class="btn" href="index.html">← Back to Portfolio</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="vs-container footer-inner">
+    <span>© 2026 Ajmal Abbas</span>
+    <span>VulStyle · IEEE/IFIP DSN 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
