@@ -37,9 +37,8 @@
       <h1>AI Policy<br><span>Intelligence Platform</span></h1>
       <h2>Automated U.S. state AI-policy research with evidence-aware verification.</h2>
       <p>
-        An end-to-end agentic AI system that discovers state-level AI policy activity, validates structured
-        findings, independently verifies claims, stores auditable evidence, tracks policy lifecycle stages,
-        and turns the resulting data into an interactive analyst-facing intelligence platform.
+        Agentic research, evidence verification, policy lifecycle tracking, and analyst-ready intelligence
+        in one auditable workflow.
       </p>
       <div class="hero-actions">
         <a class="btn primary" href="#workflow">Explore Workflow ↓</a>
@@ -63,6 +62,18 @@
     <div><b>2</b><span>Verification Phases</span></div>
     <div><b>Human-in-the-loop</b><span>Final Review Workflow</span></div>
   </div>
+
+  <div class="policy-container hero-visual-strip">
+    <div class="flow-pill">WEB SOURCES</div>
+    <span>→</span>
+    <div class="flow-pill">AGENT RESEARCH</div>
+    <span>→</span>
+    <div class="flow-pill">CLAIM VALIDATION</div>
+    <span>→</span>
+    <div class="flow-pill">INDEPENDENT VERIFICATION</div>
+    <span>→</span>
+    <div class="flow-pill">POLICY INTELLIGENCE</div>
+  </div>
 </section>
 
 <section id="problem" class="policy-section problem-section">
@@ -71,10 +82,9 @@
       <div class="section-index">01 · THE PROBLEM</div>
       <h2>State AI policy changes faster than manual research workflows can comfortably track.</h2>
       <p class="section-copy">
-        Relevant information is distributed across executive orders, legislation, strategy documents,
-        government programs, responsible-AI frameworks, workforce initiatives, task forces, and funding.
-        A useful intelligence system must do more than collect links: it must distinguish unique initiatives,
-        normalize lifecycle stages, preserve provenance, and expose weak evidence for review.
+        State AI policy is scattered across bills, executive orders, strategies, programs, funding,
+        workforce initiatives, and responsible-AI frameworks. The platform turns that fragmentation into
+        structured, reviewable intelligence.
       </p>
     </div>
 
@@ -93,8 +103,8 @@
     <div class="heading-row">
       <h2>Research, validate, verify, store, and monitor.</h2>
       <p>
-        The Langflow pipeline separates initial policy research from structured validation and second-phase
-        claim verification before producing weekly update summaries and database changes.
+        A staged Langflow pipeline separates research, validation, independent verification,
+        database updates, and weekly monitoring.
       </p>
     </div>
 
@@ -125,9 +135,19 @@
     <div class="heading-row">
       <h2>Verification is explicit, scored, and auditable.</h2>
       <p>
-        The dashboard distinguishes primary-source support from independent corroboration and preserves
-        failed checks, evidence excerpts, source quality, decision reasons, and human-review actions.
+        Each claim carries visible support, corroboration, evidence quality, failed checks,
+        and human-review state.
       </p>
+    </div>
+
+    <div class="evidence-network">
+      <div class="network-node source">PRIMARY SOURCE</div>
+      <span class="line l1"></span>
+      <div class="network-node claim">POLICY CLAIM</div>
+      <span class="line l2"></span>
+      <div class="network-node corroboration">INDEPENDENT SOURCE</div>
+      <div class="network-node score">SUPPORT SCORE</div>
+      <div class="network-node review">HUMAN REVIEW</div>
     </div>
 
     <div class="verification-grid">
@@ -159,9 +179,16 @@
     <div class="heading-row">
       <h2>Policy status is derived from lifecycle evidence—not a generic label.</h2>
       <p>
-        Legislation is grouped into unique bills before staging. The platform conservatively reports the
-        furthest confirmed stage reached by at least one identified bill without implying that every bill shares that status.
+        Unique bills are grouped first, then mapped to the furthest confirmed legislative stage.
       </p>
+    </div>
+
+    <div class="policy-domain-band">
+      <div class="capitol-mark">U.S.</div>
+      <div>
+        <span>STATE-LEVEL POLICY INTELLIGENCE</span>
+        <strong>Governance · Strategy · Legislation · Implementation · Workforce · Responsible AI · Funding</strong>
+      </div>
     </div>
 
     <div class="lifecycle">
@@ -192,8 +219,8 @@
     <div class="heading-row">
       <h2>A Streamlit dashboard built for analysis, not just display.</h2>
       <p>
-        The application exposes ten analyst views spanning national coverage, state drill-downs, verification,
-        funding, policy milestones, evidence review, an AI assistant, and system health.
+        Ten analyst views cover national progress, state drill-downs, verification, funding,
+        timelines, evidence review, policy Q&A, and pipeline health.
       </p>
     </div>
 
@@ -255,8 +282,8 @@
     <div class="heading-row">
       <h2>The LLM explains retrieved policy data—it does not invent the database.</h2>
       <p>
-        Questions are first translated into deterministic state, year, category, verification, funding,
-        and comparison filters. The optional language model then explains only the supplied database or chart context.
+        Deterministic filters retrieve the evidence first. The LLM only explains the selected database
+        or chart context.
       </p>
     </div>
 
@@ -290,8 +317,8 @@
     <div class="heading-row">
       <h2>The platform exposes its own reliability state.</h2>
       <p>
-        Research runs, validation timestamps, verification timestamps, evidence coverage, source accessibility,
-        review backlog, FastAPI availability, database state, and human-review actions are surfaced for auditability.
+        Research freshness, evidence coverage, review backlog, API health, database state,
+        and human-review actions remain visible for auditability.
       </p>
     </div>
 

@@ -94,3 +94,11 @@ The case study covers:
 - policy timeline
 - grounded policy assistant
 - pipeline/system health
+
+
+## AI Policy visual redesign
+- Reduced text density across the AI Policy case study.
+- Added more visual storytelling using CSS-based policy/evidence graphics.
+- Strengthened the state-policy / government intelligence background.
+- Preserved the real Langflow workflow screenshot.
+- No generated replacement images were used.

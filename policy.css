@@ -67,3 +67,280 @@ footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.06)}.footer-inner{d
 @media(max-width:1200px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(390px,.86fr);gap:40px}.workflow-steps{grid-template-columns:repeat(3,1fr)}.workflow-steps>span{display:none}.view-grid{grid-template-columns:repeat(2,1fr)}.policy-dimensions{grid-template-columns:repeat(2,1fr)}.lifecycle{grid-template-columns:repeat(4,1fr)}.lifecycle>i{display:none}}
 @media(max-width:980px){.hero-grid,.two-col,.heading-row,.scatter-mock,.assistant-layout{grid-template-columns:1fr}.hero-metrics{grid-template-columns:repeat(2,1fr)}.verification-grid,.health-grid,.stack-grid,.impact-grid{grid-template-columns:repeat(2,1fr)}.dashboard-shell{grid-template-columns:1fr}.dash-sidebar{display:none}.nav-links a:not(.portfolio-link){display:none}}
 @media(max-width:650px){.policy-section{padding:72px 0}.policy-hero{padding-top:42px}.hero-copy h1{font-size:54px}.hero-metrics,.challenge-grid,.verification-grid,.policy-dimensions,.view-grid,.assistant-rules,.health-grid,.stack-grid,.impact-grid,.workflow-steps,.lifecycle{grid-template-columns:1fr}.hero-metrics div{border-right:0;border-bottom:1px solid rgba(34,211,238,.12)}.dash-kpis{grid-template-columns:1fr 1fr}.dash-panels{grid-template-columns:1fr}.footer-inner{flex-direction:column;gap:8px}}
+
+
+/* ============================================================
+   VISUAL POLISH — POLICY / GOVERNMENT / EVIDENCE INTELLIGENCE
+   No generated image assets. Uses CSS + inline SVG motifs only.
+   ============================================================ */
+
+body{
+  background:
+    radial-gradient(circle at 8% 4%,rgba(34,211,238,.11),transparent 26%),
+    radial-gradient(circle at 92% 16%,rgba(59,130,246,.10),transparent 28%),
+    radial-gradient(circle at 50% 85%,rgba(139,92,246,.06),transparent 32%),
+    linear-gradient(180deg,#07111f,#081522 48%,#07111f) !important;
+}
+
+/* Faint U.S.-government / policy-document atmosphere */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  pointer-events:none;
+  opacity:.22;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='700' viewBox='0 0 1200 700'%3E%3Cg fill='none' stroke='%2322d3ee' stroke-opacity='.16'%3E%3Cpath d='M50 170 H1150 M50 350 H1150 M50 530 H1150'/%3E%3Cpath d='M180 50 V650 M430 50 V650 M680 50 V650 M930 50 V650'/%3E%3C/g%3E%3Cg fill='none' stroke='%233b82f6' stroke-opacity='.11'%3E%3Cpath d='M160 110 C270 60 380 80 470 140 S680 220 800 150 1010 80 1110 135'/%3E%3Cpath d='M100 470 C250 400 380 430 500 500 S760 590 1120 440'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:1200px 700px;
+}
+
+/* Policy-document scan lines / data layers */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  opacity:.26;
+  background:
+    repeating-linear-gradient(180deg,transparent 0 58px,rgba(255,255,255,.012) 59px 60px),
+    radial-gradient(circle at 14% 28%,rgba(34,211,238,.045),transparent 21%),
+    radial-gradient(circle at 86% 58%,rgba(59,130,246,.04),transparent 24%);
+}
+
+/* Stronger but still professional section atmosphere */
+.policy-section{
+  isolation:isolate;
+}
+.policy-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 0% 50%,rgba(34,211,238,.035),transparent 34%),
+    radial-gradient(ellipse at 100% 35%,rgba(59,130,246,.035),transparent 34%);
+}
+
+/* Hero visual summary */
+.hero-visual-strip{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+  gap:10px;
+  align-items:center;
+  margin-top:18px;
+  padding:0 0 26px;
+}
+.flow-pill{
+  min-height:64px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid rgba(34,211,238,.20);
+  background:linear-gradient(180deg,rgba(14,35,54,.86),rgba(9,24,39,.82));
+  font-size:10px;
+  letter-spacing:.10em;
+  font-weight:800;
+  color:#dffaff;
+}
+.hero-visual-strip>span{
+  color:#22d3ee;
+  font-size:20px;
+}
+
+/* Visual evidence network */
+.evidence-network{
+  height:280px;
+  position:relative;
+  margin:32px 0 18px;
+  border-radius:20px;
+  border:1px solid #223552;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(34,211,238,.08),transparent 24%),
+    linear-gradient(145deg,#0b1a2b,#0d1b2a);
+  overflow:hidden;
+}
+.evidence-network::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(rgba(34,211,238,.18) 1px,transparent 1px);
+  background-size:20px 20px;
+  opacity:.28;
+}
+.network-node{
+  position:absolute;
+  z-index:2;
+  min-width:145px;
+  padding:15px 18px;
+  border-radius:14px;
+  border:1px solid rgba(34,211,238,.28);
+  background:#0c2234;
+  color:#eafaff;
+  text-align:center;
+  font-size:10px;
+  letter-spacing:.08em;
+  font-weight:800;
+  box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+.network-node.claim{
+  left:50%;top:50%;transform:translate(-50%,-50%);
+  min-width:190px;
+  background:linear-gradient(135deg,#123652,#173d5d);
+  border-color:rgba(34,211,238,.55);
+}
+.network-node.source{left:9%;top:23%}
+.network-node.corroboration{right:8%;top:23%}
+.network-node.score{left:22%;bottom:18%}
+.network-node.review{right:20%;bottom:18%}
+.evidence-network .line{
+  position:absolute;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#22d3ee,transparent);
+  opacity:.55;
+  transform-origin:left center;
+}
+.l1{left:22%;top:37%;width:34%;transform:rotate(14deg)}
+.l2{left:50%;top:50%;width:34%;transform:rotate(-16deg)}
+
+/* Policy domain band */
+.policy-domain-band{
+  display:grid;
+  grid-template-columns:88px 1fr;
+  gap:18px;
+  align-items:center;
+  margin:28px 0 18px;
+  padding:20px 22px;
+  border-radius:18px;
+  border:1px solid rgba(59,130,246,.20);
+  background:linear-gradient(90deg,rgba(18,46,75,.92),rgba(10,27,44,.84));
+}
+.capitol-mark{
+  width:72px;height:72px;
+  border-radius:18px;
+  display:grid;place-items:center;
+  font:800 20px Manrope;
+  color:#07111f;
+  background:linear-gradient(135deg,#67e8f9,#3b82f6);
+  box-shadow:0 14px 32px rgba(34,211,238,.15);
+}
+.policy-domain-band span,
+.policy-domain-band strong{display:block}
+.policy-domain-band span{
+  font-size:9px;
+  letter-spacing:.14em;
+  color:#67e8f9;
+  font-weight:800;
+  margin-bottom:7px;
+}
+.policy-domain-band strong{
+  font:700 15px/1.6 Manrope;
+  color:#eaf3ff;
+}
+
+/* Make dashboard representation feel more like an analyst product */
+.dashboard-shell{
+  background:
+    linear-gradient(180deg,rgba(10,26,43,.96),rgba(7,17,31,.96));
+}
+.dash-main{
+  position:relative;
+  overflow:hidden;
+}
+.dash-main::after{
+  content:"";
+  position:absolute;
+  right:-90px;
+  top:-60px;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  border:1px solid rgba(34,211,238,.08);
+  box-shadow:
+    0 0 0 45px rgba(34,211,238,.018),
+    0 0 0 90px rgba(59,130,246,.012);
+  pointer-events:none;
+}
+
+/* More icon-like, less text-heavy cards */
+.challenge-grid article,
+.verification-grid article,
+.policy-dimensions article,
+.view-grid article,
+.health-grid article,
+.stack-grid article{
+  min-height:150px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  transition:transform .2s ease,border-color .2s ease;
+}
+.challenge-grid article:hover,
+.verification-grid article:hover,
+.policy-dimensions article:hover,
+.view-grid article:hover,
+.health-grid article:hover,
+.stack-grid article:hover{
+  transform:translateY(-3px);
+  border-color:rgba(34,211,238,.30);
+}
+.view-grid article{
+  min-height:165px;
+}
+
+/* Reduce body-text density */
+.policy-section p{
+  max-width:760px;
+}
+.challenge-grid p,
+.verification-grid p,
+.policy-dimensions p,
+.view-grid p,
+.health-grid p,
+.stack-grid p{
+  max-width:none;
+  line-height:1.5;
+}
+
+/* Bigger visual separation between sections */
+.workflow-section,
+.dashboard-section,
+.assistant-section{
+  box-shadow:inset 0 1px rgba(34,211,238,.035),inset 0 -1px rgba(59,130,246,.025);
+}
+
+@media(max-width:980px){
+  .hero-visual-strip{
+    grid-template-columns:1fr 1fr;
+  }
+  .hero-visual-strip>span{display:none}
+  .evidence-network{height:360px}
+  .network-node.source{left:5%;top:16%}
+  .network-node.corroboration{right:5%;top:16%}
+  .network-node.score{left:8%;bottom:14%}
+  .network-node.review{right:8%;bottom:14%}
+}
+
+@media(max-width:650px){
+  .hero-visual-strip{grid-template-columns:1fr}
+  .evidence-network{
+    height:auto;
+    padding:18px;
+    display:grid;
+    gap:10px;
+  }
+  .network-node{
+    position:relative!important;
+    inset:auto!important;
+    transform:none!important;
+    min-width:0;
+  }
+  .evidence-network .line{display:none}
+  .policy-domain-band{grid-template-columns:1fr}
+}
