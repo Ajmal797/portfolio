@@ -292,3 +292,127 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;ba
     grid-template-columns:1fr;
   }
 }
+
+
+/* =========================================================
+   V9 — MARINE SCIENTIFIC ENVIRONMENT
+   Subtle oceanographic treatment; research figures untouched.
+   ========================================================= */
+
+html {
+  background: #020d14;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 12% 10%, rgba(0, 180, 190, .10), transparent 33%),
+    radial-gradient(ellipse at 88% 25%, rgba(25, 90, 170, .10), transparent 35%),
+    linear-gradient(180deg, #03131b 0%, #021019 35%, #03141b 68%, #020d14 100%) !important;
+}
+
+/* Oceanographic contour field */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='520' viewBox='0 0 900 520'%3E%3Cg fill='none' stroke='%2338d9d4' stroke-opacity='.28' stroke-width='1'%3E%3Cpath d='M-80 160 C80 40 210 70 330 150 S590 270 980 70'/%3E%3Cpath d='M-100 205 C65 85 220 110 350 190 S620 310 990 115'/%3E%3Cpath d='M-120 250 C55 130 235 150 370 235 S650 355 1000 160'/%3E%3Cpath d='M-120 400 C100 270 260 300 410 370 S700 470 1020 300'/%3E%3Cpath d='M-140 445 C90 315 280 340 430 415 S720 515 1030 345'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 900px 520px;
+}
+
+/* Soft underwater light / current glow */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(110deg, transparent 0 8%, rgba(65, 220, 215, .025) 18%, transparent 29%),
+    linear-gradient(72deg, transparent 58%, rgba(55, 120, 220, .035) 69%, transparent 82%);
+}
+
+/* Give major sections changing oceanographic zones */
+main > section,
+section {
+  position: relative;
+}
+
+main > section:nth-of-type(odd)::before,
+section:nth-of-type(odd)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(17, 153, 158, .045), transparent 38%),
+    linear-gradient(180deg, rgba(2, 18, 27, .08), rgba(3, 31, 39, .10));
+}
+
+main > section:nth-of-type(even)::before,
+section:nth-of-type(even)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 100% 45%, rgba(45, 95, 175, .045), transparent 36%);
+}
+
+/* Scientific "water-column" depth marks at the page edge */
+@media (min-width: 1100px) {
+  main::after {
+    content: "SURFACE  ·  COASTAL  ·  SHELF  ·  DEEP";
+    position: fixed;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center;
+    font-size: 8px;
+    letter-spacing: .28em;
+    color: rgba(119, 218, 216, .22);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Cards pick up a restrained glass/oceanographic instrument feel */
+.card,
+.metric,
+.stat,
+[class*="card"],
+[class*="metric"] {
+  backdrop-filter: blur(2px);
+}
+
+/* Research imagery remains clean and dominant */
+img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Very subtle current-line treatment around large figure containers */
+figure,
+[class*="figure"],
+[class*="visual"],
+[class*="image"] {
+  position: relative;
+}
+
+/* Mobile: reduce textures so readability/performance stay strong */
+@media (max-width: 760px) {
+  body::before {
+    opacity: .08;
+    background-size: 700px 405px;
+  }
+  body::after {
+    opacity: .55;
+  }
+}

@@ -37,3 +37,13 @@ portfolio/
     └── spatial-results.jpg
 
 Upload everything to the root of the existing GitHub `portfolio` repository.
+
+
+## V9 marine-domain visual treatment
+
+This version keeps the approved V8 page structure and all original thesis/research
+images. Only the surrounding visual environment was enhanced in `marine.css`:
+deep-ocean gradients, subtle bathymetric contour lines, ocean-current lighting,
+and alternating oceanographic section atmospheres.
+
+No research figure was replaced, edited, cropped, or regenerated.
