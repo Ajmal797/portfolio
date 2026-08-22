@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trustworthy Multimodal AI | Ajmal Abbas</title>
+  <meta name="description" content="IEEE SIEDS 2026 case study: From Weak Embeddings to Trustworthy Multimodality — a modality-agnostic framework integrating confidence calibration, uncertainty estimation, and confidence-aware fallback." />
+  <meta name="author" content="Ajmal Abbas" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/trustworthy-multimodality.html" />
+  <link rel="stylesheet" href="trustworthy.css" />
+</head>
+<body>
+
+<header class="trust-nav">
+  <div class="trust-container nav-inner">
+    <a class="brand" href="index.html"><span>AA</span>Ajmal Abbas</a>
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#framework">Framework</a>
+      <a href="#calibration">Calibration</a>
+      <a href="#fallback">Fallback</a>
+      <a href="#results">Results</a>
+      <a href="#publication">Publication</a>
+      <a class="portfolio-link" href="index.html">← Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="trust-hero">
+  <div class="embedding-field">
+    <i class="e1"></i><i class="e2"></i><i class="e3"></i><i class="e4"></i><i class="e5"></i>
+    <i class="e6"></i><i class="e7"></i><i class="e8"></i><i class="e9"></i><i class="e10"></i>
+  </div>
+
+  <div class="trust-container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">TRUSTWORTHY AI · MULTIMODAL LEARNING · IEEE SIEDS 2026</div>
+
+      <h1>
+        From Weak Embeddings to<br>
+        <span>Trustworthy Multimodality</span>
+      </h1>
+
+      <h2>Modality-Agnostic Learning with Confidence-Aware Fallback</h2>
+
+      <p>
+        A reliability-aware multimodal framework that combines semantic alignment,
+        confidence calibration, uncertainty estimation, and cross-modal fallback
+        validation so predictions are not only accurate, but easier to trust.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="https://doi.org/10.1109/SIEDS69358.2026.11540272" target="_blank" rel="noopener">View IEEE Paper ↗</a>
+        <a class="btn" href="#results">Explore Results ↓</a>
+        <a class="btn" href="index.html">← Portfolio</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="panel-row">
+        <div class="panel-icon">◎</div>
+        <div><span>RESEARCHER</span><strong>Ajmal Abbas</strong><small>Co-author · IEEE SIEDS 2026</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">◇</div>
+        <div><span>CORE PROBLEM</span><strong>Confidence ≠ Correctness</strong><small>Reducing overconfident multimodal predictions</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">⌁</div>
+        <div><span>RELIABILITY LAYER</span><strong>Calibration + Uncertainty</strong><small>Temperature scaling and entropy-based uncertainty</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">↺</div>
+        <div><span>FALLBACK</span><strong>CLIP · VQA · BLIP</strong><small>Cross-modal validation for low-confidence outputs</small></div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="trust-container hero-metrics">
+    <div><b>0.1054 → 0.0438</b><span>Expected Calibration Error</span></div>
+    <div><b>58.4%</b><span>ECE Reduction</span></div>
+    <div><b>Image + Video</b><span>Evaluation Modalities</span></div>
+    <div><b>&lt; 0.60</b><span>Example Fallback Trigger</span></div>
+    <div><b>IEEE SIEDS 2026</b><span>Published Research</span></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="trust-section problem-section">
+  <div class="trust-container two-col">
+    <div>
+      <div class="section-index">01 · THE PROBLEM</div>
+      <h2>Multimodal models can be confidently wrong.</h2>
+      <p class="section-copy">
+        Shared embeddings make it possible to reason across text, images, audio, and video,
+        but prediction confidence is often derived from uncalibrated softmax scores. A model
+        may therefore report high certainty even when the prediction is incorrect, ambiguous,
+        or supported by weak cross-modal evidence.
+      </p>
+    </div>
+
+    <div class="problem-visual">
+      <div class="confidence-gauge">
+        <div class="gauge-ring"></div>
+        <div class="gauge-core">95%</div>
+        <span>PREDICTED CONFIDENCE</span>
+      </div>
+      <div class="mismatch">
+        <span>ACTUAL CORRECTNESS</span>
+        <strong>≈ 80%</strong>
+        <p>Overconfidence creates misleading certainty in decision-critical settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAP -->
+<section class="trust-section gap-section">
+  <div class="trust-container">
+    <div class="section-index">02 · RESEARCH GAP</div>
+    <div class="heading-row">
+      <h2>Strong embeddings alone do not guarantee reliable inference.</h2>
+      <p>
+        Prior multimodal research largely improved shared representation quality, while
+        calibration, uncertainty, and selective prediction were often treated as separate
+        problems. The proposed work unifies these reliability mechanisms inside the inference pipeline.
+      </p>
+    </div>
+
+    <div class="gap-grid">
+      <article><span>REPRESENTATION</span><h3>Shared Embeddings</h3><p>Align visual and semantic information in a common latent space.</p></article>
+      <article><span>CALIBRATION</span><h3>Meaningful Confidence</h3><p>Transform raw softmax scores into probabilities that better reflect correctness.</p></article>
+      <article><span>UNCERTAINTY</span><h3>Know When Unsure</h3><p>Use predictive entropy to identify ambiguous or diffuse predictions.</p></article>
+      <article><span>VALIDATION</span><h3>Fallback Reasoning</h3><p>Re-check low-confidence predictions with additional cross-modal evidence.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section id="framework" class="trust-section framework-section">
+  <div class="trust-container">
+    <div class="section-index">03 · PROPOSED FRAMEWORK</div>
+    <div class="heading-row">
+      <h2>Reliability is built into the inference path.</h2>
+      <p>
+        The framework combines a base visual prediction with calibration and entropy-based
+        uncertainty. Reliable outputs are accepted; uncertain outputs are routed through
+        cross-modal validation before a final decision is produced.
+      </p>
+    </div>
+
+    <div class="pipeline">
+      <article><i>01</i><div class="p-icon">▧</div><h3>Input</h3><p>Image or video content</p></article>
+      <span>→</span>
+      <article><i>02</i><div class="p-icon">◫</div><h3>Embedding</h3><p>ResNet50 / modality features</p></article>
+      <span>→</span>
+      <article><i>03</i><div class="p-icon">∑</div><h3>Prediction</h3><p>Classifier + softmax logits</p></article>
+      <span>→</span>
+      <article class="cal"><i>04</i><div class="p-icon">T</div><h3>Calibration</h3><p>Temperature scaling</p></article>
+      <span>→</span>
+      <article class="unc"><i>05</i><div class="p-icon">H</div><h3>Uncertainty</h3><p>Entropy estimation</p></article>
+      <span>→</span>
+      <article class="decision"><i>06</i><div class="p-icon">?</div><h3>Reliable?</h3><p>Confidence + entropy thresholds</p></article>
+      <span>→</span>
+      <article class="fall"><i>07</i><div class="p-icon">↺</div><h3>Fallback</h3><p>CLIP · VQA · BLIP</p></article>
+      <span>→</span>
+      <article><i>08</i><div class="p-icon">✓</div><h3>Final Output</h3><p>Validated decision</p></article>
+    </div>
+
+    <figure class="paper-figure">
+      <img src="trust-assets/reliability-aware-framework.png" alt="Reliability-aware vision-language inference framework from the IEEE paper">
+      <figcaption>Reliability-aware inference framework from the published IEEE paper.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- SHARED EMBEDDINGS -->
+<section class="trust-section embedding-section">
+  <div class="trust-container two-col embedding-layout">
+    <div>
+      <div class="section-index">04 · SHARED EMBEDDING LEARNING</div>
+      <h2>One representation space, two downstream inference modes.</h2>
+      <p class="section-copy">
+        Visual and semantic representations are projected into a shared latent space.
+        The framework supports both zero-shot inference through center-based similarity
+        and supervised fine-tuning through a trainable classification head.
+      </p>
+
+      <div class="feature-list">
+        <div><b>2048-d</b><span>visual feature embedding</span></div>
+        <div><b>Zero-shot</b><span>center-bank similarity branch</span></div>
+        <div><b>Fine-tuning</b><span>trainable classification branch</span></div>
+      </div>
+    </div>
+
+    <figure class="paper-figure clean">
+      <img src="trust-assets/shared-embedding-framework.png" alt="Shared embedding framework with zero-shot and fine-tuning branches">
+      <figcaption>Shared representation framework supporting zero-shot and fine-tuned inference.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CALIBRATION -->
+<section id="calibration" class="trust-section calibration-section">
+  <div class="trust-container">
+    <div class="section-index">05 · CALIBRATION & UNCERTAINTY</div>
+    <div class="heading-row">
+      <h2>Confidence should mean something.</h2>
+      <p>
+        Temperature scaling softens overconfident probability distributions without changing
+        the original class ranking. Entropy adds a second reliability signal by measuring how
+        concentrated or diffuse the calibrated prediction distribution is.
+      </p>
+    </div>
+
+    <div class="calibration-grid">
+      <div class="metric-card before">
+        <span>BEFORE CALIBRATION</span>
+        <strong>ECE 0.1054</strong>
+        <p>Systematic overconfidence: predicted confidence exceeds observed accuracy.</p>
+      </div>
+      <div class="metric-arrow">→</div>
+      <div class="metric-card after">
+        <span>AFTER TEMPERATURE SCALING</span>
+        <strong>ECE 0.0438</strong>
+        <p>Confidence becomes much better aligned with empirical correctness.</p>
+      </div>
+      <div class="metric-card reduction">
+        <span>RELATIVE IMPROVEMENT</span>
+        <strong>58.4%</strong>
+        <p>Reduction in Expected Calibration Error.</p>
+      </div>
+    </div>
+
+    <div class="calibration-visuals">
+      <figure class="paper-figure">
+        <img src="trust-assets/reliability-diagram.png" alt="Reliability diagram comparing calibration before and after temperature scaling">
+        <figcaption>Reliability diagram: post-calibration confidence tracks empirical accuracy more closely.</figcaption>
+      </figure>
+
+      <div class="entropy-card">
+        <div class="entropy-orbit low"><span>LOW ENTROPY</span><b>Confident</b></div>
+        <div class="entropy-orbit high"><span>HIGH ENTROPY</span><b>Uncertain</b></div>
+        <h3>Entropy becomes a trigger signal.</h3>
+        <p>
+          Low entropy corresponds to concentrated, confident predictions. High entropy
+          identifies ambiguous cases where confidence alone may be insufficient.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FALLBACK -->
+<section id="fallback" class="trust-section fallback-section">
+  <div class="trust-container">
+    <div class="section-index">06 · CONFIDENCE-AWARE FALLBACK</div>
+    <div class="heading-row">
+      <h2>When confidence is low, the system asks for more evidence.</h2>
+      <p>
+        A low-confidence prediction can activate auxiliary cross-modal reasoning instead of
+        being accepted directly. The paper illustrates a predefined threshold such as 0.60;
+        the fixed threshold is also explicitly identified as a limitation and future opportunity.
+      </p>
+    </div>
+
+    <div class="fallback-flow">
+      <article class="primary-pred">
+        <span>PRIMARY MODEL</span>
+        <strong>Prediction + calibrated confidence + entropy</strong>
+      </article>
+
+      <div class="threshold">
+        <b>Confidence &lt; 0.60?</b>
+        <span>or uncertainty too high</span>
+      </div>
+
+      <div class="fallback-tools">
+        <article><div>CLIP</div><h3>Zero-shot re-evaluation</h3><p>Checks semantic class agreement.</p></article>
+        <article><div>VQA</div><h3>Question-based validation</h3><p>Verifies semantic correctness through reasoning.</p></article>
+        <article><div>BLIP</div><h3>Caption evidence</h3><p>Generates descriptive language for additional cross-modal validation.</p></article>
+      </div>
+
+      <div class="validated-output">CROSS-MODAL VALIDATION → FINAL OUTPUT</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIMENTS -->
+<section class="trust-section experiment-section">
+  <div class="trust-container">
+    <div class="section-index">07 · EXPERIMENTS</div>
+    <div class="heading-row">
+      <h2>Evaluation spans predictive performance and confidence reliability.</h2>
+      <p>
+        The experiments cover image and video tasks, using temperature scaling for calibration
+        and CLIP/BLIP-based fallback components to test reliability under uncertainty.
+      </p>
+    </div>
+
+    <div class="experiment-grid">
+      <article><span>IMAGE</span><h3>CIFAR-100</h3><p>Processed with a ResNet backbone for image classification experiments.</p></article>
+      <article><span>VIDEO</span><h3>Action Recognition</h3><p>Processed using an R3D-18 3D CNN for temporal action recognition.</p></article>
+      <article><span>FALLBACK</span><h3>CLIP + BLIP</h3><p>Zero-shot classification and image captioning support cross-modal verification.</p></article>
+      <article><span>METRICS</span><h3>ECE + Reliability</h3><p>Expected Calibration Error, reliability diagrams, confidence consistency, entropy, and accuracy.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" class="trust-section results-section">
+  <div class="trust-container">
+    <div class="section-index">08 · RESULTS</div>
+    <h2>Calibration improves reliability; fallback strengthens ambiguous cases.</h2>
+
+    <div class="result-strip">
+      <div><strong>0.1054</strong><span>ECE Before</span></div>
+      <div class="result-arrow">→</div>
+      <div><strong>0.0438</strong><span>ECE After</span></div>
+      <div><strong>58.4%</strong><span>Calibration Error Reduction</span></div>
+      <div><strong>0.9152</strong><span>Video Example Confidence</span></div>
+      <div><strong>0.99</strong><span>Dolphin Caption Confidence</span></div>
+    </div>
+
+    <div class="examples-grid">
+      <figure class="paper-figure">
+        <img src="trust-assets/video-confidence.png" alt="Video action recognition confidence example">
+        <figcaption>Video example: “Table Tennis shot” predicted with calibrated confidence 0.9152; the paper reports VQA agreement with the primary prediction.</figcaption>
+      </figure>
+
+      <figure class="paper-figure">
+        <img src="trust-assets/dolphin-confidence.png" alt="Dolphin image caption confidence example">
+        <figcaption>Captioning example: dolphin prediction/caption confidence reported as 0.99.</figcaption>
+      </figure>
+    </div>
+
+    <div class="result-summary">
+      <article><span>CALIBRATION</span><h3>Less overconfidence</h3><p>Reliability curves move closer to the ideal confidence-accuracy diagonal.</p></article>
+      <article><span>UNCERTAINTY</span><h3>Better ambiguity detection</h3><p>Entropy helps distinguish sharp confident predictions from diffuse uncertain ones.</p></article>
+      <article><span>FALLBACK</span><h3>More robust validation</h3><p>Low-confidence predictions can be re-checked using complementary multimodal evidence.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section class="trust-section impact-section">
+  <div class="trust-container">
+    <div class="section-index">09 · WHY IT MATTERS</div>
+    <div class="heading-row">
+      <h2>Trustworthy AI requires knowing when not to trust the first answer.</h2>
+      <p>
+        Decision-critical multimodal systems need more than strong embeddings and high accuracy.
+        They need confidence estimates that reflect correctness, explicit uncertainty signals,
+        and a mechanism for validating weak predictions.
+      </p>
+    </div>
+
+    <div class="impact-grid">
+      <div>✓ Better confidence-to-correctness alignment</div>
+      <div>✓ Explicit uncertainty estimation</div>
+      <div>✓ Cross-modal verification of uncertain outputs</div>
+      <div>✓ Support for safer decision-critical deployment</div>
+      <div>✓ Transparent reliability-aware inference path</div>
+      <div>✓ Framework applicable beyond a single modality</div>
+    </div>
+  </div>
+</section>
+
+<!-- LIMITATIONS -->
+<section class="trust-section limitations-section">
+  <div class="trust-container">
+    <div class="section-index">10 · LIMITATIONS & NEXT STEPS</div>
+    <h2>Reliability is improved, but not solved.</h2>
+
+    <div class="limitations-grid">
+      <article><span>01</span><h3>Prompt sensitivity</h3><p>Semantic representations can vary with LLM prompt design.</p></article>
+      <article><span>02</span><h3>Fixed fallback threshold</h3><p>A manually chosen threshold does not adapt to input complexity or modality-specific uncertainty.</p></article>
+      <article><span>03</span><h3>Global temperature parameter</h3><p>A single calibration parameter may be insufficient under heterogeneous multimodal uncertainty or distribution shift.</p></article>
+      <article><span>04</span><h3>External-model dependency</h3><p>CLIP, BLIP, and VQA add latency and can propagate errors because the components are not jointly optimized.</p></article>
+    </div>
+
+    <div class="future-strip">
+      <span>FUTURE DIRECTIONS</span>
+      <b>Adaptive calibration · feature-level interpretability · multi-class extension · scalable real-time multimodal inference</b>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication" class="trust-section publication-section">
+  <div class="trust-container publication-card">
+    <div>
+      <div class="section-index">11 · IEEE PUBLICATION</div>
+      <h2>From Weak Embeddings to Trustworthy Multimodality: Modality-Agnostic Learning with Confidence-Aware Fallback</h2>
+
+      <p class="authors">
+        Ajmal Abbas · Pratheswaran Hariharan · Aswin Sankar · Vishnu Selvaraj · Long Jiao
+      </p>
+
+      <div class="publication-meta">
+        <span>2026 Systems and Information Engineering Design Symposium (SIEDS)</span>
+        <code>DOI: 10.1109/SIEDS69358.2026.11540272</code>
+      </div>
+    </div>
+
+    <a class="btn primary large" href="https://doi.org/10.1109/SIEDS69358.2026.11540272" target="_blank" rel="noopener">Read IEEE Paper ↗</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final-cta">
+  <div class="trust-container">
+    <div class="kicker">TRUSTWORTHY AI · MULTIMODAL LEARNING · RELIABLE INFERENCE</div>
+    <h2>Building AI systems that know when confidence should be questioned.</h2>
+    <div class="hero-actions center">
+      <a class="btn primary" href="mailto:ajmalimra.a@gmail.com">Contact Ajmal</a>
+      <a class="btn" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="Ajmal_Abbas_Resume.pdf" target="_blank">Resume ↗</a>
+      <a class="btn" href="index.html">← Back to Portfolio</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="trust-container footer-inner">
+    <span>© 2026 Ajmal Abbas</span>
+    <span>Trustworthy Multimodal AI · IEEE SIEDS 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

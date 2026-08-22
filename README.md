@@ -1,58 +1,29 @@
-# Ajmal Abbas Portfolio — V8 Restored Marine Page
+# Ajmal Abbas Portfolio — Trustworthy Multimodal AI Final Case Study
 
-This is the corrected package.
+This package preserves the existing homepage and finished Marine Ecosystem case study,
+and adds one complete Trustworthy Multimodal AI case-study page based on the IEEE SIEDS 2026 paper.
 
-It restores the Marine Ecosystem case study to the Version 3 image-based layout
-that was previously approved, while keeping the later fixed hero layout that
-was adjusted to remove the excessive empty space.
+## New files
+- trustworthy-multimodality.html
+- trustworthy.css
+- trust-assets/
+  - reliability-aware-framework.png
+  - shared-embedding-framework.png
+  - reliability-diagram.png
+  - video-confidence.png
+  - dolphin-confidence.png
 
-## Important
+## Homepage
+The Featured Research card for "From Weak Embeddings to Trustworthy Multimodality"
+now links to the new case study.
 
-The `marine-assets` folder is REQUIRED.
+## Source-grounded content
+The case study is based on:
+"From Weak Embeddings to Trustworthy Multimodality:
+Modality-Agnostic Learning with Confidence-Aware Fallback"
+IEEE SIEDS 2026
+DOI: 10.1109/SIEDS69358.2026.11540272
 
-Do not remove or rename it because `marine-emulator.html` loads the thesis-defense
-visuals from that directory.
-
-## GitHub structure
-
-portfolio/
-├── Ajmal_Abbas_Resume.pdf
-├── README.md
-├── index.html
-├── marine-emulator.html
-├── marine.css
-├── profile.jpg
-├── robots.txt
-├── script.js
-├── sitemap.xml
-├── styles.css
-└── marine-assets/
-    ├── actual-vs-predicted.jpg
-    ├── dataset-structure.jpg
-    ├── emulator-architecture.jpg
-    ├── forecasting-result.jpg
-    ├── guild-polygon-accuracy.jpg
-    ├── research-workflow.jpg
-    ├── runtime-result.jpg
-    └── spatial-results.jpg
-
-Upload everything to the root of the existing GitHub `portfolio` repository.
-
-
-## V9 marine-domain visual treatment
-
-This version keeps the approved V8 page structure and all original thesis/research
-images. Only the surrounding visual environment was enhanced in `marine.css`:
-deep-ocean gradients, subtle bathymetric contour lines, ocean-current lighting,
-and alternating oceanographic section atmospheres.
-
-No research figure was replaced, edited, cropped, or regenerated.
-
-
-## V10 final marine-page polish
-- Preserved all 8 original thesis/research figures.
-- Removed only the small UMass corner banners and slide-number boxes from the screenshots.
-- Reduced the workflow figure's visual dominance.
-- Improved spacing in the forecasting section.
-- Slightly strengthened the bathymetric/ocean-current background treatment.
-- No generated replacement research graphics were used.
+## GitHub
+Upload everything in this package to the root of the existing `portfolio` repository.
+Keep both `marine-assets/` and `trust-assets/` as folders.
