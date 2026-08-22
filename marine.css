@@ -213,3 +213,82 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;ba
     font-size:16px;
   }
 }
+
+
+/* =========================================================
+   V6 HERO LAYOUT FIX
+   Fixes inherited V3 flex behavior that pushed the metrics
+   to the right and created excessive empty space.
+   ========================================================= */
+
+.case-hero.hero-v5{
+  display:block !important;
+  align-items:initial !important;
+  min-height:0 !important;
+  width:100%;
+  padding-top:46px;
+}
+
+.hero-v5-grid{
+  width:min(1450px,94vw);
+  margin:0 auto;
+  grid-template-columns:minmax(0,1.05fr) minmax(430px,.95fr);
+  gap:58px;
+  align-items:center;
+}
+
+.hero-v5-copy{
+  max-width:none;
+  padding-bottom:12px;
+}
+
+.hero-v5-panel{
+  width:100%;
+  max-width:none;
+  margin-top:0;
+}
+
+.hero-v5-metrics{
+  width:min(1450px,94vw);
+  margin:34px auto 0;
+  position:relative;
+  left:auto;
+  right:auto;
+  bottom:auto;
+}
+
+.hero-v5 .hero-buttons{
+  margin-bottom:0;
+}
+
+@media(max-width:1200px){
+  .hero-v5-grid{
+    grid-template-columns:minmax(0,1fr) minmax(380px,.85fr);
+    gap:42px;
+  }
+
+  .hero-v5 h1{
+    font-size:clamp(66px,7vw,105px);
+  }
+}
+
+@media(max-width:980px){
+  .hero-v5-grid{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+
+  .hero-v5-panel{
+    max-width:760px;
+  }
+
+  .hero-v5-metrics{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px){
+  .hero-v5-metrics{
+    grid-template-columns:1fr;
+  }
+}
