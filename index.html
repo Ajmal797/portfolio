@@ -8,14 +8,21 @@
   <meta name="author" content="Ajmal Abbas">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/">
+  <meta name="theme-color" content="#07111c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ajmal Abbas | Machine Learning Engineer & AI Researcher">
+  <meta property="og:description" content="AI/ML portfolio spanning scientific AI, agentic systems, trustworthy multimodal learning, cybersecurity, and computer vision.">
+  <meta property="og:url" content="https://portfolio.ajmalimra-a.workers.dev/">
+  <meta property="og:image" content="https://portfolio.ajmalimra-a.workers.dev/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="nav-wrap">
   <nav class="nav container">
     <a class="brand" href="#home"><span class="brand-mark">AA</span><span>Ajmal Abbas</span></a>
-    <button class="menu-toggle" aria-label="Open navigation">☰</button>
-    <div class="nav-links">
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+    <div class="nav-links" id="primary-navigation">
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
@@ -35,8 +42,8 @@
     <div class="hero-copy reveal">
       <div class="eyebrow">MACHINE LEARNING ENGINEER · AI RESEARCHER · DATA SCIENTIST</div>
       <h1>AJMAL <span>ABBAS</span></h1>
-      <h2>Building intelligent systems that move from research to real-world impact.</h2>
-      <p>I design and evaluate AI/ML systems across scientific AI, agentic AI, marine ecosystem modeling, trustworthy multimodal learning, cybersecurity, and computer vision.</p>
+      <h2>Building reliable AI systems from research prototype to real-world application.</h2>
+      <p>I build end-to-end machine-learning and AI systems across scientific modeling, agentic workflows, trustworthy multimodal AI, cybersecurity, and computer vision — from data and experimentation through evaluation and deployment.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#research">Explore My Work</a>
         <a class="btn btn-ghost" href="Ajmal_Abbas_Resume.pdf" target="_blank">View Resume</a>
@@ -44,7 +51,7 @@
       </div>
       <div class="credibility-strip">
         <div><strong>M.S. Data Science</strong><span>UMass Dartmouth · 4.0/4.0</span></div>
-        <div><strong>Published Research</strong><span>IEEE · DSN contributions</span></div>
+        <div><strong>Published Research</strong><span>IEEE · DSN · Master&#39;s Thesis</span></div>
         <div><strong>Research + Engineering</strong><span>Scientific, Agentic & Trustworthy AI</span></div>
       </div>
     </div>
@@ -68,8 +75,8 @@
     <div class="about-copy reveal">
       <div class="eyebrow teal">01 · ABOUT</div>
       <h2>Research-minded.<br>Engineering-focused.<br>Domain-flexible.</h2>
-      <p>I am a Machine Learning Engineer and AI Researcher with hands-on experience designing, training, evaluating, and deploying AI/ML solutions across marine ecosystem modeling, cybersecurity, trustworthy multimodal AI, computer vision, and agentic AI.</p>
-      <p>I enjoy turning complex datasets and research questions into reliable predictive systems, decision-support tools, and scalable AI workflows.</p>
+      <p>I am a Machine Learning Engineer and AI Researcher who turns complex datasets and research questions into evaluated AI systems, predictive models, and decision-support workflows.</p>
+      <p>My work spans scientific machine learning, agentic AI, trustworthy multimodal learning, cybersecurity, and computer vision, with an emphasis on measurable performance and practical implementation.</p>
       <div class="focus-grid">
         <div>Machine Learning & Deep Learning</div><div>Generative & Agentic AI</div><div>Scientific AI</div>
         <div>Data Science & Analytics</div><div>Trustworthy Multimodal AI</div><div>Cybersecurity ML</div>
@@ -96,7 +103,7 @@
           <h3>Emulating Marine Ecosystem Dynamics</h3>
           <p>A scalable machine-learning surrogate for biomass prediction and forecasting using Northeast U.S. Atlantis ecosystem simulations.</p>
           <div class="metric-mini">
-            <span><b>~3.4M</b> records</span><span><b>544</b> simulations</span><span><b>22</b> polygons</span>
+            <span><b>~3.4M</b> records</span><span><b>544</b> simulations</span><span><b>22</b> spatial polygons</span>
           </div>
           <div class="tag-row"><span>Extra Trees</span><span>AutoML</span><span>LSTM</span><span>Scientific ML</span></div>
           <div class="case-link">Explore case study <span>↗</span></div>
@@ -131,7 +138,7 @@
         <a class="card-cover-link" href="ai-policy-intelligence.html" aria-label="Open AI Policy Intelligence case study"></a><div class="project-icon violet-bg">◉</div><div class="micro-label violet">AGENTIC AI</div><h3>AI Policy Intelligence Platform</h3><p>Agentic research workflow for state-level AI policy discovery, evidence extraction, claim verification, structured storage, change detection, and comparative dashboards.</p><div class="tag-row"><span>LLMs</span><span>Langflow</span><span>Streamlit</span><span>Validation</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
       <article class="project-card reveal">
         <a class="card-cover-link" href="geneguard-ai.html" aria-label="Open GeneGuard AI case study"></a><div class="project-icon teal-bg">✦</div><div class="micro-label teal">AI · GENOMICS</div><h3>GeneGuard AI</h3><p>Genetic disease-risk intelligence workflow combining structured family history with ClinVar and GWAS evidence for disease-specific risk analysis.</p><div class="tag-row"><span>AI Agents</span><span>GWAS</span><span>ClinVar</span><span>Genomics</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
-      <article class="project-card reveal"><div class="project-icon blue-bg">◈</div><div class="micro-label">COMPUTER VISION</div><h3>DeepFake Detection</h3><p>Deep-learning framework combining CNNs, LSTMs, and attention mechanisms for detection of manipulated video content.</p><div class="tag-row"><span>CNN</span><span>LSTM</span><span>Attention</span><span>Video AI</span></div></article>
+      <article class="project-card reveal supporting-project"><div class="project-icon blue-bg">◈</div><div class="micro-label">COMPUTER VISION · SUPPORTING PROJECT</div><h3>DeepFake Detection</h3><p>Deep-learning framework combining CNNs, LSTMs, and attention mechanisms for manipulated-video detection.</p><div class="tag-row"><span>CNN</span><span>LSTM</span><span>Attention</span><span>Video AI</span></div><div class="case-link muted">Project overview</div></article>
       <article class="project-card reveal">
         <a class="card-cover-link" href="paddy-leaf-disease.html" aria-label="Open Paddy Leaf Disease Detection case study"></a><div class="project-icon agri-bg">⌁</div><div class="micro-label agri">COMPUTER VISION · AGRICULTURE AI</div><h3>Paddy Leaf Disease Detection</h3><p>IEEE-published deep-learning research benchmarking multiple computer-vision architectures and Detectron2 for automated rice leaf disease recognition.</p><div class="tag-row"><span>Detectron2</span><span>Deep Learning</span><span>Computer Vision</span><span>IEEE</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
       <article class="project-card reveal">
@@ -144,10 +151,10 @@
   <div class="container">
     <div class="section-heading reveal"><div class="eyebrow warm">04 · PUBLICATIONS & RESEARCH OUTPUT</div><h2>Published and presented work</h2></div>
     <div class="publication-grid">
-      <article class="pub-card reveal"><span class="pub-year">2026</span><h3>From Weak Embeddings to Trustworthy Multimodality</h3><p>Modality-Agnostic Learning with Confidence-Aware Fallback</p><span class="status">IEEE SIEDS</span></article>
-      <article class="pub-card reveal" style="position:relative"><a class="card-cover-link" href="vulstyle.html" aria-label="Open VulStyle case study"></a><span class="pub-year">2026</span><h3>VulStyle</h3><p>A Multi-Modal Pre-Training for Code Stylometry-Augmented Vulnerability Detection</p><span class="status">IEEE/IFIP DSN 2026 · Accepted</span></article>
-      <article class="pub-card reveal" style="position:relative"><a class="card-cover-link" href="paddy-leaf-disease.html" aria-label="Open Paddy Leaf Disease Detection case study"></a><span class="pub-year">2024</span><h3>Paddy Leaf Disease Detection & Classification</h3><p>A Cutting Edge Deep Learning Models for Paddy Leaf Disease Detection and Classification</p><span class="status">IEEE AIIoT 2024 · Published</span></article>
-      <article class="pub-card reveal thesis-publication-card" style="position:relative"><a class="card-cover-link" href="marine-emulator.html" aria-label="Open Marine Ecosystem Dynamics master's thesis case study"></a><span class="pub-year">2026 · MASTER'S THESIS</span><h3>Emulating Marine Ecosystem Dynamics</h3><p>A Machine Learning Approach for Biomass Prediction and Forecasting</p><div class="thesis-pub-meta"><span>UMass Dartmouth</span><span>DOI: 10.62791/20585</span></div><span class="status">Published · Institutional Repository</span></article>
+      <article class="pub-card reveal" style="position:relative"><a class="card-cover-link" href="trustworthy-multimodality.html" aria-label="Open Trustworthy Multimodality case study"></a><span class="pub-year">2026</span><h3>From Weak Embeddings to Trustworthy Multimodality</h3><p>Modality-Agnostic Learning with Confidence-Aware Fallback</p><span class="status">IEEE SIEDS 2026 · Published</span><a class="pub-external-link" href="https://doi.org/10.1109/SIEDS69358.2026.11540272" target="_blank" rel="noopener">IEEE ↗</a></article>
+      <article class="pub-card reveal" style="position:relative"><a class="card-cover-link" href="vulstyle.html" aria-label="Open VulStyle case study"></a><span class="pub-year">2026</span><h3>VulStyle</h3><p>A Multi-Modal Pre-Training for Code Stylometry-Augmented Vulnerability Detection</p><span class="status">IEEE/IFIP DSN 2026 · Accepted</span><a class="pub-external-link" href="https://arxiv.org/abs/2604.26313" target="_blank" rel="noopener">arXiv ↗</a></article>
+      <article class="pub-card reveal" style="position:relative"><a class="card-cover-link" href="paddy-leaf-disease.html" aria-label="Open Paddy Leaf Disease Detection case study"></a><span class="pub-year">2024</span><h3>Paddy Leaf Disease Detection & Classification</h3><p>A Cutting Edge Deep Learning Models for Paddy Leaf Disease Detection and Classification</p><span class="status">IEEE AIIoT 2024 · Published</span><a class="pub-external-link" href="https://doi.org/10.1109/AIIoT58432.2024.10574681" target="_blank" rel="noopener">IEEE ↗</a></article>
+      <article class="pub-card reveal thesis-publication-card" style="position:relative"><a class="card-cover-link" href="marine-emulator.html" aria-label="Open Marine Ecosystem Dynamics master's thesis case study"></a><span class="pub-year">2026 · MASTER'S THESIS</span><h3>Emulating Marine Ecosystem Dynamics</h3><p>A Machine Learning Approach for Biomass Prediction and Forecasting</p><div class="thesis-pub-meta"><span>UMass Dartmouth</span><span>DOI: 10.62791/20585</span></div><span class="status">Published · Institutional Repository</span><a class="pub-external-link" href="https://doi.org/10.62791/20585" target="_blank" rel="noopener">Thesis DOI ↗</a></article>
     </div>
   </div>
 </section>
@@ -156,9 +163,9 @@
   <div class="container">
     <div class="section-heading reveal"><div class="eyebrow teal">05 · EXPERIENCE</div><h2>Research and applied technical experience</h2></div>
     <div class="timeline">
-      <div class="timeline-item reveal"><div class="date">JUL 2026 — AUG 2026</div><div class="dot"></div><div class="timeline-content"><h3>AI Agent Developer Intern</h3><h4>NeuralSeek</h4><p>Worked on agentic AI research and development, including GeneGuard AI, a genetic disease-risk intelligence workflow integrating structured family-history information with genomic evidence.</p></div></div>
-      <div class="timeline-item reveal"><div class="date">SEP 2025 — MAY 2026</div><div class="dot"></div><div class="timeline-content"><h3>Graduate Research Assistant</h3><h4>School for Marine Science & Technology · UMass Dartmouth</h4><p>Developed a large-scale marine ecosystem emulator for biomass prediction and forecasting using Atlantis simulation outputs.</p></div></div>
-      <div class="timeline-item reveal"><div class="date">JUN 2025 — AUG 2025</div><div class="dot"></div><div class="timeline-content"><h3>Graduate Research Assistant</h3><h4>College of Engineering · UMass Dartmouth</h4><p>Built hybrid software vulnerability detection combining code stylometry and transformer-based embeddings.</p></div></div>
+      <div class="timeline-item reveal"><div class="date">JUL — AUG 2026</div><div class="dot"></div><div class="timeline-content"><h3>AI Agent Developer Intern</h3><h4>NeuralSeek</h4><p>Developed agentic AI research workflows, including GeneGuard AI, integrating structured family-history features with genomic evidence and explainable risk analysis.</p></div></div>
+      <div class="timeline-item reveal"><div class="date">SEP 2025 — MAY 2026</div><div class="dot"></div><div class="timeline-content"><h3>Graduate Research Assistant</h3><h4>School for Marine Science & Technology · UMass Dartmouth</h4><p>Developed a large-scale ML surrogate for Northeast U.S. Atlantis simulations, supporting biomass prediction, long-term forecasting, and spatial model evaluation.</p></div></div>
+      <div class="timeline-item reveal"><div class="date">JUN 2025 — AUG 2025</div><div class="dot"></div><div class="timeline-content"><h3>Graduate Research Assistant</h3><h4>College of Engineering · UMass Dartmouth</h4><p>Contributed to VulStyle, combining source code, reduced AST structure, and code stylometry for transformer-based software vulnerability detection.</p></div></div>
       <div class="timeline-item reveal"><div class="date">DEC 2024 — JAN 2025</div><div class="dot"></div><div class="timeline-content"><h3>Graduate Research Assistant</h3><h4>UMass Dartmouth</h4><p>Implemented graph neural network-based intrusion detection for anomaly and cyber-threat identification.</p></div></div>
     </div>
   </div>
@@ -168,22 +175,22 @@
   <div class="container">
     <div class="section-heading reveal"><div class="eyebrow">06 · TECHNICAL EXPERTISE</div><h2>Tools I use to build, evaluate, and deploy AI systems</h2></div>
     <div class="skill-grid">
-      <div class="skill-card reveal"><h3>AI / ML</h3><p>PyTorch · TensorFlow · Scikit-learn · XGBoost · LightGBM · Deep Learning · NLP</p></div>
-      <div class="skill-card reveal"><h3>Generative AI</h3><p>LLMs · Hugging Face · Agentic AI · Langflow · LLM-powered applications</p></div>
+      <div class="skill-card reveal"><h3>Machine Learning</h3><p>PyTorch · TensorFlow · Scikit-learn · XGBoost · LightGBM · Deep Learning · NLP · Time Series</p></div>
+      <div class="skill-card reveal"><h3>LLMs & Agentic AI</h3><p>LLMs · Hugging Face · Agentic AI · Langflow · RAG-style workflows · LLM applications</p></div>
       <div class="skill-card reveal"><h3>Data</h3><p>Python · SQL · R · PySpark · Pandas · Big Data · Statistical Analysis</p></div>
       <div class="skill-card reveal"><h3>Scientific & Geo</h3><p>GeoPandas · ArcGIS · Marine ecosystem modeling · Scientific ML</p></div>
-      <div class="skill-card reveal"><h3>Applications</h3><p>Streamlit · Tableau · Django · Data Visualization · Model Deployment</p></div>
+      <div class="skill-card reveal"><h3>Applications & Deployment</h3><p>Streamlit · FastAPI · Django · Tableau · Data Visualization · Model Deployment</p></div>
     </div>
   </div>
 </section>
 
 <section id="certifications" class="section certifications-section">
   <div class="container">
-    <div class="section-heading reveal"><div class="eyebrow violet">07 · CERTIFICATIONS & PROFESSIONAL DEVELOPMENT</div><h2>Continuous learning across AI, data, and cloud platforms</h2><p>Current professional-development areas; exact credential titles can be added as certificates are finalized.</p></div>
+    <div class="section-heading reveal"><div class="eyebrow violet">07 · PROFESSIONAL DEVELOPMENT</div><h2>Current learning across AI, data, and cloud platforms</h2><p>Active training areas are listed here separately from completed credentials.</p></div>
     <div class="cert-grid">
-      <div class="cert-card reveal"><div class="cert-brand">AZURE</div><h3>Azure AI & Data</h3><p>OpenAI · Synapse Analytics · Databricks · Data Engineering</p></div>
-      <div class="cert-card reveal"><div class="cert-brand">SNOWFLAKE</div><h3>Snowflake</h3><p>Cloud data platform training and professional development.</p></div>
-      <div class="cert-card reveal"><div class="cert-brand">AGENTIC AI</div><h3>AI Automation & Agentic AI</h3><p>Professional development in AI automation and agentic system workflows.</p></div>
+      <div class="cert-card reveal"><div class="cert-brand">IN PROGRESS</div><h3>Azure AI & Data</h3><p>OpenAI · Synapse Analytics · Databricks · Data Engineering</p></div>
+      <div class="cert-card reveal"><div class="cert-brand">IN PROGRESS</div><h3>Snowflake</h3><p>Cloud data platform training and professional development.</p></div>
+      <div class="cert-card reveal"><div class="cert-brand">IN PROGRESS</div><h3>AI Automation & Agentic AI</h3><p>Professional development in AI automation and agentic system workflows.</p></div>
     </div>
   </div>
 </section>
@@ -202,7 +209,7 @@
 <section id="contact" class="section contact-section">
   <div class="container">
     <div class="contact-card reveal">
-      <div><div class="eyebrow">09 · CONTACT</div><h2>Let's build something useful.</h2><p>Open to machine learning, AI research, data science, and interdisciplinary technical opportunities.</p></div>
+      <div><div class="eyebrow">09 · CONTACT</div><h2>Let's build something useful.</h2><p>Open to Machine Learning Engineer, AI Engineer, Applied AI / Research, and Data Scientist opportunities.</p></div>
       <div class="contact-actions">
         <a class="btn btn-primary" href="mailto:ajmalimra.a@gmail.com">Email Me</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn</a>
