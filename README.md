@@ -142,3 +142,10 @@ Homepage integration:
 Source:
 2024 IEEE AIIoT paper, DOI 10.1109/AIIoT58432.2024.10574681.
 All research visuals on the case-study page are extracted from the uploaded IEEE paper.
+
+
+## Paddy figure-fit correction
+- Re-cropped all six IEEE figures tightly from the rendered paper pages.
+- Removed surrounding conference headers/body text from the web images.
+- Fixed leaf samples, model-comparison table, Detectron2 architecture, and result images.
+- Added content-aware sizing so figures fit their sections without stretching or clipping.
