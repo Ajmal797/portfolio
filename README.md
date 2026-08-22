@@ -27,3 +27,9 @@ DOI: 10.1109/SIEDS69358.2026.11540272
 ## GitHub
 Upload everything in this package to the root of the existing `portfolio` repository.
 Keep both `marine-assets/` and `trust-assets/` as folders.
+
+
+## Final corrections
+- Homepage Trustworthy AI card verified clickable.
+- Ajmal Abbas shown as Lead / First Author.
+- Figure 2 (proposed reliability-aware framework) re-cropped directly from page 3 of the IEEE paper and correctly placed.

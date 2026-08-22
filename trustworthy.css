@@ -478,3 +478,23 @@ footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.06)}
   .hero-metrics div{border-right:0;border-bottom:1px solid rgba(155,114,255,.12)}
   .footer-inner{flex-direction:column;gap:8px}
 }
+
+
+/* Final corrections */
+.lead-author{
+  color:#d7c4ff;
+  font-weight:800;
+}
+
+.framework-section .paper-figure{
+  max-width:1040px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.framework-section .paper-figure img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#fff;
+}
