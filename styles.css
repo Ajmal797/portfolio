@@ -31,3 +31,9 @@
   font-weight:800;
   pointer-events:none;
 }
+
+
+/* AI Policy Intelligence card integration */
+.project-card{position:relative}
+.project-card .card-cover-link{position:absolute;inset:0;z-index:6}
+.project-card .case-link{position:relative;z-index:7;margin-top:20px;color:var(--teal);font-size:12px;font-weight:800;pointer-events:none}

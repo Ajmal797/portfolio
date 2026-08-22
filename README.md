@@ -64,3 +64,33 @@ Important responsible-use wording is preserved:
 - family-history models are research models trained on synthetic family records
 - genomic evidence summarizes ClinVar/GWAS datasets
 - the system is not a clinical diagnostic or treatment tool
+
+
+## AI Policy Intelligence Platform case study
+
+Added a complete AI Policy Intelligence Platform case study grounded in:
+- the user's actual Langflow workflow screenshot
+- the user's Streamlit/Python implementation
+
+New files:
+- ai-policy-intelligence.html
+- policy.css
+- policy-assets/langflow-workflow.png
+
+Homepage:
+- AI Policy Intelligence Platform project card links to ai-policy-intelligence.html.
+
+The case study covers:
+- agentic Tavily research
+- policy output validation
+- Phase 2 independent claim verification
+- SQLite staging/production data flow
+- weekly update workflow
+- unique initiative grouping
+- legislative lifecycle classification
+- evidence confidence and human review
+- national/state dashboard views
+- funding intelligence
+- policy timeline
+- grounded policy assistant
+- pipeline/system health

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Policy Intelligence Platform | Ajmal Abbas</title>
+  <meta name="description" content="AI Policy Intelligence Platform by Ajmal Abbas — an agentic AI system for U.S. state AI-policy research, evidence verification, structured storage, human review, and interactive policy intelligence.">
+  <meta name="author" content="Ajmal Abbas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/ai-policy-intelligence.html">
+  <link rel="stylesheet" href="policy.css">
+</head>
+<body>
+
+<header class="policy-nav">
+  <div class="policy-container nav-inner">
+    <a class="brand" href="index.html"><span>AA</span>Ajmal Abbas</a>
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#verification">Verification</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#assistant">Assistant</a>
+      <a href="#health">System</a>
+      <a class="portfolio-link" href="index.html">← Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="policy-hero">
+  <div class="grid-bg"></div>
+  <div class="policy-container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">AGENTIC AI · POLICY RESEARCH · EVIDENCE VERIFICATION · DATA INTELLIGENCE</div>
+      <h1>AI Policy<br><span>Intelligence Platform</span></h1>
+      <h2>Automated U.S. state AI-policy research with evidence-aware verification.</h2>
+      <p>
+        An end-to-end agentic AI system that discovers state-level AI policy activity, validates structured
+        findings, independently verifies claims, stores auditable evidence, tracks policy lifecycle stages,
+        and turns the resulting data into an interactive analyst-facing intelligence platform.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#workflow">Explore Workflow ↓</a>
+        <a class="btn" href="#dashboard">Dashboard ↓</a>
+        <a class="btn" href="index.html">← Portfolio</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="panel-row"><div class="panel-icon">01</div><div><span>RESEARCH</span><strong>Tavily + Agentic Search</strong><small>State policy discovery and evidence collection</small></div></div>
+      <div class="panel-row"><div class="panel-icon">02</div><div><span>VALIDATION</span><strong>Structured Policy Output</strong><small>Schema validation, metadata checks, normalized findings</small></div></div>
+      <div class="panel-row"><div class="panel-icon">03</div><div><span>VERIFICATION</span><strong>Independent Evidence Checks</strong><small>Primary support, corroboration, identifiers, dates, values</small></div></div>
+      <div class="panel-row"><div class="panel-icon">04</div><div><span>INTELLIGENCE</span><strong>SQLite + Streamlit</strong><small>Policy comparison, lifecycle analysis, human review, assistant</small></div></div>
+    </aside>
+  </div>
+
+  <div class="policy-container hero-metrics">
+    <div><b>10</b><span>Analyst Dashboard Views</span></div>
+    <div><b>7</b><span>Policy Dimensions</span></div>
+    <div><b>3</b><span>Core Evidence Layers</span></div>
+    <div><b>2</b><span>Verification Phases</span></div>
+    <div><b>Human-in-the-loop</b><span>Final Review Workflow</span></div>
+  </div>
+</section>
+
+<section id="problem" class="policy-section problem-section">
+  <div class="policy-container two-col">
+    <div>
+      <div class="section-index">01 · THE PROBLEM</div>
+      <h2>State AI policy changes faster than manual research workflows can comfortably track.</h2>
+      <p class="section-copy">
+        Relevant information is distributed across executive orders, legislation, strategy documents,
+        government programs, responsible-AI frameworks, workforce initiatives, task forces, and funding.
+        A useful intelligence system must do more than collect links: it must distinguish unique initiatives,
+        normalize lifecycle stages, preserve provenance, and expose weak evidence for review.
+      </p>
+    </div>
+
+    <div class="challenge-grid">
+      <article><span>DISCOVERY</span><h3>Fragmented sources</h3><p>Policy evidence is scattered across state government, legislative, agency, and secondary sources.</p></article>
+      <article><span>RELIABILITY</span><h3>Claims need verification</h3><p>Extracted statements require exact-source support, identifiers, dates, money values, and corroboration.</p></article>
+      <article><span>CHANGE</span><h3>Policy lifecycle matters</h3><p>A bill can move from introduced to committee, chamber passage, governor action, signed, and effective.</p></article>
+      <article><span>ANALYSIS</span><h3>Raw findings are not intelligence</h3><p>Analysts need deduplicated initiatives, comparisons, evidence confidence, timelines, funding context, and review queues.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="workflow" class="policy-section workflow-section">
+  <div class="policy-container">
+    <div class="section-index">02 · AGENTIC RESEARCH WORKFLOW</div>
+    <div class="heading-row">
+      <h2>Research, validate, verify, store, and monitor.</h2>
+      <p>
+        The Langflow pipeline separates initial policy research from structured validation and second-phase
+        claim verification before producing weekly update summaries and database changes.
+      </p>
+    </div>
+
+    <figure class="langflow-figure">
+      <img src="policy-assets/langflow-workflow.png" alt="Actual Langflow workflow for the AI Policy Intelligence Platform">
+      <figcaption>Actual Langflow workflow used by the project.</figcaption>
+    </figure>
+
+    <div class="workflow-steps">
+      <article><i>01</i><div>SEARCH</div><h3>Tavily Research</h3><p>Deterministic web research for state AI-policy evidence.</p></article>
+      <span>→</span>
+      <article><i>02</i><div>AGENT</div><h3>Policy Research Agent</h3><p>Transforms research evidence into structured policy findings.</p></article>
+      <span>→</span>
+      <article><i>03</i><div>CHECK</div><h3>Output Validation</h3><p>Validates URLs, metadata, dates, identifiers, and schema consistency.</p></article>
+      <span>→</span>
+      <article><i>04</i><div>VERIFY</div><h3>Phase 2 Verification</h3><p>Independent search and claim-support verification.</p></article>
+      <span>→</span>
+      <article><i>05</i><div>STORE</div><h3>SQLite Staging / Production</h3><p>Stores findings, evidence, research runs, review decisions, and audit state.</p></article>
+      <span>→</span>
+      <article><i>06</i><div>UPDATE</div><h3>Weekly Policy Update</h3><p>Compares new verified research with prior data and summarizes material changes.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="verification" class="policy-section verification-section">
+  <div class="policy-container">
+    <div class="section-index">03 · EVIDENCE-AWARE VERIFICATION</div>
+    <div class="heading-row">
+      <h2>Verification is explicit, scored, and auditable.</h2>
+      <p>
+        The dashboard distinguishes primary-source support from independent corroboration and preserves
+        failed checks, evidence excerpts, source quality, decision reasons, and human-review actions.
+      </p>
+    </div>
+
+    <div class="verification-grid">
+      <article><span>PRIMARY SOURCE</span><strong>Support Score</strong><p>Measures how strongly the original source supports the exact structured claim.</p></article>
+      <article><span>SECONDARY SOURCE</span><strong>Corroboration Score</strong><p>Measures independent support for the same claim from a separate source.</p></article>
+      <article><span>CRITICAL CHECKS</span><strong>Identifiers + Values</strong><p>Bill/EO identifiers, dates, monetary values, action anchors, and contradiction signals are checked.</p></article>
+      <article><span>HUMAN REVIEW</span><strong>Verify · Reject · Review</strong><p>Human decisions are stored separately while preserving the original AI verification result.</p></article>
+    </div>
+
+    <div class="scatter-mock">
+      <div class="scatter-copy">
+        <span>VERIFICATION LAB</span>
+        <h3>Primary support vs. independent corroboration</h3>
+        <p>Bubble size represents evidence count; color represents verification status.</p>
+        <div class="legend"><b class="g"></b> Verified <b class="y"></b> Partial <b class="r"></b> Unverified</div>
+      </div>
+      <div class="scatter-chart">
+        <div class="axis y">Secondary corroboration</div>
+        <div class="axis x">Primary support score</div>
+        <i class="p1 g"></i><i class="p2 g"></i><i class="p3 y"></i><i class="p4 r"></i><i class="p5 g"></i><i class="p6 y"></i><i class="p7 g"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="policy-section lifecycle-section">
+  <div class="policy-container">
+    <div class="section-index">04 · POLICY LIFECYCLE INTELLIGENCE</div>
+    <div class="heading-row">
+      <h2>Policy status is derived from lifecycle evidence—not a generic label.</h2>
+      <p>
+        Legislation is grouped into unique bills before staging. The platform conservatively reports the
+        furthest confirmed stage reached by at least one identified bill without implying that every bill shares that status.
+      </p>
+    </div>
+
+    <div class="lifecycle">
+      <div><span>01</span><b>Introduced</b></div><i>→</i>
+      <div><span>02</span><b>Committee</b></div><i>→</i>
+      <div><span>03</span><b>Passed House / Senate</b></div><i>→</i>
+      <div><span>04</span><b>Passed Both Chambers</b></div><i>→</i>
+      <div><span>05</span><b>Governor's Desk</b></div><i>→</i>
+      <div><span>06</span><b>Signed / Enacted</b></div><i>→</i>
+      <div><span>07</span><b>Effective</b></div>
+    </div>
+
+    <div class="policy-dimensions">
+      <article><span>GOVERNANCE</span><h3>Task forces & mechanisms</h3><p>Established → Active → Recommendations → Completed</p></article>
+      <article><span>STRATEGY</span><h3>Plans & roadmaps</h3><p>Exploring → Development → Draft → Final → Implementation</p></article>
+      <article><span>LEGISLATION</span><h3>Bills & laws</h3><p>Full legislative lifecycle with failed/withdrawn tracked separately</p></article>
+      <article><span>PROJECTS</span><h3>Government AI</h3><p>Announced → Planned → Pilot → Implementation → Operational</p></article>
+      <article><span>WORKFORCE</span><h3>Education & training</h3><p>Proposed → Announced → Established → Active → Expanded</p></article>
+      <article><span>RESPONSIBLE AI</span><h3>Guidance & controls</h3><p>Exploring → Framework → Policy → Implementation</p></article>
+      <article><span>FUNDING</span><h3>Investment lifecycle</h3><p>Proposed → Announced → Appropriated → Allocated → Spent</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="dashboard" class="policy-section dashboard-section">
+  <div class="policy-container">
+    <div class="section-index">05 · INTERACTIVE POLICY INTELLIGENCE</div>
+    <div class="heading-row">
+      <h2>A Streamlit dashboard built for analysis, not just display.</h2>
+      <p>
+        The application exposes ten analyst views spanning national coverage, state drill-downs, verification,
+        funding, policy milestones, evidence review, an AI assistant, and system health.
+      </p>
+    </div>
+
+    <div class="dashboard-shell">
+      <aside class="dash-sidebar">
+        <strong>🏛 AI Policy Intelligence</strong>
+        <span class="active">National Overview</span>
+        <span>State Explorer</span>
+        <span>Policy Landscape</span>
+        <span>State Comparison</span>
+        <span>Verification Lab</span>
+        <span>Review & Evidence</span>
+        <span>Funding Intelligence</span>
+        <span>Policy Timeline</span>
+        <span>Policy Assistant</span>
+        <span>Pipeline Health</span>
+      </aside>
+
+      <div class="dash-main">
+        <div class="dash-title"><small>NATIONAL COMMAND CENTER</small><h3>State AI Policy Intelligence</h3></div>
+        <div class="dash-kpis">
+          <div><span>States Completed</span><b>STATE DATA</b></div>
+          <div><span>Unique Initiatives</span><b>DEDUPED</b></div>
+          <div><span>Verified Initiatives</span><b>EVIDENCE</b></div>
+          <div><span>Needs Human Review</span><b>RISK QUEUE</b></div>
+          <div><span>Verified Funding</span><b>DEDUPED</b></div>
+        </div>
+        <div class="dash-panels">
+          <div class="us-map">
+            <span>U.S. COVERAGE</span>
+            <div class="map-shape">MA<br>RI<br>TX</div>
+          </div>
+          <div class="bar-panel">
+            <span>LEGISLATIVE PROGRESS</span>
+            <div class="bars"><i style="height:72%"></i><i style="height:48%"></i><i style="height:86%"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-grid">
+      <article><span>01</span><h3>National Overview</h3><p>Unique initiatives, verified evidence, review backlog, funding, coverage map, and progress charts.</p></article>
+      <article><span>02</span><h3>State Explorer</h3><p>State-level governance, strategy, legislation, implementation, workforce, responsible AI, and funding.</p></article>
+      <article><span>03</span><h3>Policy Landscape</h3><p>Cross-state policy dimensions, unique initiative grouping, lifecycle staging, and evidence confidence.</p></article>
+      <article><span>04</span><h3>State Comparison</h3><p>Side-by-side progress, findings, verified evidence, funding, and legislative activity.</p></article>
+      <article><span>05</span><h3>Verification Lab</h3><p>Support scores, corroboration, failed checks, source quality, and claim inspection.</p></article>
+      <article><span>06</span><h3>Review & Evidence</h3><p>Risk-prioritized human review with preserved AI decisions and audit trail.</p></article>
+      <article><span>07</span><h3>Funding Intelligence</h3><p>Deduplicated funding records, verification status, and statewide vs initiative-linked interpretation.</p></article>
+      <article><span>08</span><h3>Policy Timeline</h3><p>Normalized milestones for bill passage, signing, strategy releases, governance, implementation, and funding.</p></article>
+      <article><span>09</span><h3>Policy Assistant</h3><p>Natural-language questions grounded in database rows and chart context.</p></article>
+      <article><span>10</span><h3>Pipeline Health</h3><p>Research freshness, evidence coverage, API status, review backlog, provenance, and system diagnostics.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="assistant" class="policy-section assistant-section">
+  <div class="policy-container">
+    <div class="section-index">06 · GROUNDED POLICY ASSISTANT</div>
+    <div class="heading-row">
+      <h2>The LLM explains retrieved policy data—it does not invent the database.</h2>
+      <p>
+        Questions are first translated into deterministic state, year, category, verification, funding,
+        and comparison filters. The optional language model then explains only the supplied database or chart context.
+      </p>
+    </div>
+
+    <div class="assistant-layout">
+      <div class="assistant-rules">
+        <article><span>RULE 1</span><h3>Database-first</h3><p>Structured filters and deterministic answers exist before LLM rewriting.</p></article>
+        <article><span>RULE 2</span><h3>Context constrained</h3><p>The model receives selected records/chart data rather than unrestricted policy knowledge.</p></article>
+        <article><span>RULE 3</span><h3>No invented policy facts</h3><p>System instructions prohibit fabricated policies, dates, bills, executive orders, amounts, sources, or verification outcomes.</p></article>
+        <article><span>RULE 4</span><h3>Fallback behavior</h3><p>If the AI service is unavailable, the deterministic database answer remains usable.</p></article>
+      </div>
+
+      <div class="chat-mock">
+        <div class="chat-top">AI POLICY ASSISTANT <span>database + chart grounded</span></div>
+        <div class="msg user">Compare Massachusetts, Rhode Island, and Texas.</div>
+        <div class="msg ai">
+          <b>Assistant</b>
+          <p>I'll compare the selected states using the currently loaded policy findings, verification status, funding records, and progress dimensions.</p>
+          <div class="row"><span>Massachusetts</span><i></i></div>
+          <div class="row"><span>Rhode Island</span><i></i></div>
+          <div class="row"><span>Texas</span><i></i></div>
+        </div>
+        <div class="chat-input">Ask about funding, policies, evidence, or comparisons…</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="health" class="policy-section system-section">
+  <div class="policy-container">
+    <div class="section-index">07 · PROVENANCE, REVIEW & SYSTEM HEALTH</div>
+    <div class="heading-row">
+      <h2>The platform exposes its own reliability state.</h2>
+      <p>
+        Research runs, validation timestamps, verification timestamps, evidence coverage, source accessibility,
+        review backlog, FastAPI availability, database state, and human-review actions are surfaced for auditability.
+      </p>
+    </div>
+
+    <div class="health-grid">
+      <article><span>RESEARCH FRESHNESS</span><h3>Run timestamps</h3><p>Tracks the latest stored research, validation, and verification runs.</p></article>
+      <article><span>EVIDENCE COVERAGE</span><h3>Evidence gaps</h3><p>Identifies findings without corresponding evidence records.</p></article>
+      <article><span>HUMAN REVIEW</span><h3>Risk-prioritized queue</h3><p>High-risk or uncertain findings are surfaced for analyst action.</p></article>
+      <article><span>API HEALTH</span><h3>FastAPI endpoint</h3><p>Health endpoint availability and latency are monitored from the dashboard.</p></article>
+      <article><span>AUDITABILITY</span><h3>Review history</h3><p>Human verification decisions retain reviewer, notes, prior status, and timestamp.</p></article>
+      <article><span>DATA LAYER</span><h3>SQLite provenance</h3><p>Policy findings, evidence records, research runs, and review actions remain structured and queryable.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="policy-section engineering-section">
+  <div class="policy-container">
+    <div class="section-index">08 · ENGINEERING STACK</div>
+    <h2>Agentic research meets deterministic data engineering.</h2>
+    <div class="stack-grid">
+      <article><span>AGENTIC AI</span><h3>Langflow · LLM Agent</h3><p>Workflow orchestration and structured policy research.</p></article>
+      <article><span>WEB RESEARCH</span><h3>Tavily</h3><p>Targeted state AI-policy discovery and independent evidence search.</p></article>
+      <article><span>BACKEND</span><h3>Python · FastAPI</h3><p>Validation, APIs, deterministic processing, health checks, and system integration.</p></article>
+      <article><span>DATA</span><h3>SQLite · Pandas</h3><p>Structured findings, evidence, research runs, deduplication, analytics, and review state.</p></article>
+      <article><span>VISUALIZATION</span><h3>Streamlit · Plotly</h3><p>Interactive national/state views, maps, comparisons, timelines, verification charts, and review tools.</p></article>
+      <article><span>LLM ASSISTANT</span><h3>OpenAI Responses API</h3><p>Optional context-constrained explanations grounded in database and chart records.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="policy-section impact-section">
+  <div class="policy-container">
+    <div class="section-index">09 · WHAT THIS PROJECT DEMONSTRATES</div>
+    <h2>Not just an agent. A complete intelligence workflow.</h2>
+    <div class="impact-grid">
+      <div>✓ Multi-stage agentic research orchestration</div>
+      <div>✓ Evidence-aware hallucination controls</div>
+      <div>✓ Deterministic validation and lifecycle classification</div>
+      <div>✓ Human-in-the-loop verification</div>
+      <div>✓ Structured storage and provenance</div>
+      <div>✓ Interactive analyst dashboards</div>
+      <div>✓ Natural-language database intelligence</div>
+      <div>✓ Weekly monitoring and change-detection workflow</div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="policy-container">
+    <div class="kicker">AGENTIC AI · EVIDENCE SYSTEMS · POLICY INTELLIGENCE</div>
+    <h2>Building AI systems that research, verify, structure, and explain—not just generate.</h2>
+    <div class="hero-actions center">
+      <a class="btn primary" href="mailto:ajmalimra.a@gmail.com">Contact Ajmal</a>
+      <a class="btn" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="Ajmal_Abbas_Resume.pdf" target="_blank">Resume ↗</a>
+      <a class="btn" href="index.html">← Back to Portfolio</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="policy-container footer-inner">
+    <span>© 2026 Ajmal Abbas</span>
+    <span>AI Policy Intelligence Platform</span>
+  </div>
+</footer>
+</body>
+</html>
