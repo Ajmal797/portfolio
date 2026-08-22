@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paddy Leaf Disease Detection | Ajmal Abbas</title>
+  <meta name="description" content="IEEE AIIoT 2024 case study: deep learning and Detectron2 for paddy leaf disease detection and classification." />
+  <meta name="author" content="Ajmal Abbas" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/paddy-leaf-disease.html" />
+  <link rel="stylesheet" href="paddy.css" />
+</head>
+<body>
+
+<header class="pd-nav">
+  <div class="pd-container nav-inner">
+    <a class="brand" href="index.html"><span>AA</span>Ajmal Abbas</a>
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#data">Data</a>
+      <a href="#models">Models</a>
+      <a href="#detectron">Detectron2</a>
+      <a href="#results">Results</a>
+      <a href="#impact">Impact</a>
+      <a href="#publication">Publication</a>
+      <a class="portfolio-link" href="index.html">← Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="pd-hero">
+  <div class="leaf-field" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <div class="pd-container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">COMPUTER VISION · DEEP LEARNING · AGRICULTURE AI · IEEE AIIoT 2024</div>
+      <h1>Paddy Leaf<br><span>Disease Detection</span></h1>
+      <h2>Deep-learning models for automated disease detection and classification in rice crops.</h2>
+      <p>
+        A computer-vision study benchmarking multiple deep-learning architectures and Detectron2
+        for automated paddy leaf disease recognition, with a focus on improving scalable and timely
+        agricultural disease detection.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="https://doi.org/10.1109/AIIoT58432.2024.10574681" target="_blank" rel="noopener">Read IEEE Paper ↗</a>
+        <a class="btn" href="#results">Explore Results ↓</a>
+        <a class="btn" href="index.html">← Portfolio</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="panel-row">
+        <div class="panel-icon">CV</div>
+        <div><span>DOMAIN</span><strong>Agricultural Computer Vision</strong><small>Automated paddy leaf disease recognition</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">D2</div>
+        <div><span>PRIMARY MODEL</span><strong>Detectron2</strong><small>Instance detection / segmentation research workflow</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">DL</div>
+        <div><span>BENCHMARKING</span><strong>Multiple CNN Architectures</strong><small>CNN · VGG16 · MobileNetV2 · DenseNet · Xception and more</small></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-icon">IE</div>
+        <div><span>PUBLICATION</span><strong>IEEE AIIoT 2024</strong><small>Published research · Ajmal listed as co-author</small></div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="pd-container hero-metrics">
+    <div><b>3,355</b><span>Leaf Images</span></div>
+    <div><b>97%</b><span>Detectron2 Accuracy</span></div>
+    <div><b>3,000</b><span>Detectron2 Iterations</span></div>
+    <div><b>9+</b><span>Deep-Learning Models Compared</span></div>
+    <div><b>IEEE 2024</b><span>Published Research</span></div>
+  </div>
+</section>
+
+<section id="problem" class="pd-section problem-section">
+  <div class="pd-container two-col">
+    <div>
+      <div class="section-index">01 · AGRICULTURAL CHALLENGE</div>
+      <h2>Leaf disease can reduce crop quality before manual inspection catches it.</h2>
+      <p class="section-copy">
+        Rice leaf diseases threaten agricultural output, while manual diagnosis can be labor-intensive
+        and subjective. The project investigates computer vision as a scalable method for recognizing
+        disease patterns from leaf images.
+      </p>
+    </div>
+
+    <div class="problem-visual">
+      <div class="leaf-scan">
+        <div class="scan-leaf"></div>
+        <span class="box b1">disease region</span>
+        <span class="box b2">leaf tissue</span>
+        <span class="scan-line"></span>
+      </div>
+      <div class="problem-tags">
+        <span>Manual inspection</span>
+        <span>Visual similarity</span>
+        <span>Limited labeled data</span>
+        <span>Field variability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="data" class="pd-section data-section">
+  <div class="pd-container">
+    <div class="section-index">02 · DATASET</div>
+    <div class="heading-row">
+      <h2>Learning from thousands of paddy leaf images.</h2>
+      <p>
+        The study used 3,355 images collected from web sources including Kaggle and Google Images.
+        The paper describes healthy leaves alongside disease categories such as bacterial blight,
+        brown spot, and leaf blast.
+      </p>
+    </div>
+
+    <div class="data-grid">
+      <div class="data-stat"><b>3,355</b><span>Total images</span></div>
+      <div class="data-stat"><b>Healthy + Diseased</b><span>Classification scope</span></div>
+      <div class="data-stat"><b>Augmentation</b><span>Generalization strategy</span></div>
+      <div class="data-stat"><b>COCO JSON</b><span>Detectron2 annotation format</span></div>
+    </div>
+
+    <figure class="paper-figure">
+      <img src="paddy-assets/leaf-samples.jpg" alt="Sample rice crop leaf images from the IEEE paper" />
+      <figcaption>Sample paddy leaf images shown in the IEEE paper.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="models" class="pd-section models-section">
+  <div class="pd-container">
+    <div class="section-index">03 · MODEL BENCHMARKING</div>
+    <div class="heading-row">
+      <h2>Multiple architectures were evaluated—not just one network.</h2>
+      <p>
+        The experiments compare conventional CNNs and transfer-learning architectures before
+        evaluating Detectron2 as the primary detection framework.
+      </p>
+    </div>
+
+    <div class="model-grid">
+      <article><span>BASELINE</span><h3>CNN</h3><b>92%</b><small>50 epochs</small></article>
+      <article><span>TRANSFER LEARNING</span><h3>VGG16</h3><b>76%</b><small>50 epochs</small></article>
+      <article><span>LIGHTWEIGHT</span><h3>MobileNetV2</h3><b>91%</b><small>50 epochs</small></article>
+      <article><span>RESIDUAL</span><h3>ResNet50</h3><b>50%</b><small>50 epochs</small></article>
+      <article><span>MULTI-SCALE</span><h3>InceptionV3</h3><b>80%</b><small>50 epochs</small></article>
+      <article><span>DENSE CONNECTIVITY</span><h3>DenseNet121</h3><b>92%</b><small>50 epochs</small></article>
+      <article><span>SEPARABLE CONV</span><h3>Xception</h3><b>92%</b><small>50 epochs</small></article>
+      <article><span>ENSEMBLE</span><h3>DenseNet + Xception</h3><b>91%</b><small>50 epochs</small></article>
+      <article><span>EFFICIENT SCALING</span><h3>EfficientNet B3</h3><b>32%</b><small>50 epochs</small></article>
+    </div>
+
+    <figure class="paper-figure table-figure">
+      <img src="paddy-assets/model-comparison-table.jpg" alt="Model performance comparison table from the IEEE paper" />
+      <figcaption>Model comparison table from the published paper.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="detectron" class="pd-section detectron-section">
+  <div class="pd-container two-col detectron-grid">
+    <div>
+      <div class="section-index">04 · DETECTRON2 PIPELINE</div>
+      <h2>Detection moves beyond simple image classification.</h2>
+      <p class="section-copy">
+        Detectron2 uses a backbone network, feature pyramid, region proposal network, ROI heads,
+        and detection / mask heads. The paper uses a Mask R-CNN configuration with a ResNet-101
+        backbone and Feature Pyramid Network.
+      </p>
+
+      <div class="pipeline-mini">
+        <div>INPUT IMAGE</div><i>→</i>
+        <div>BACKBONE</div><i>→</i>
+        <div>FPN</div><i>→</i>
+        <div>RPN</div><i>→</i>
+        <div>ROI / MASK</div>
+      </div>
+
+      <div class="config-cards">
+        <article><span>BACKBONE</span><b>ResNet-101</b></article>
+        <article><span>FEATURES</span><b>FPN</b></article>
+        <article><span>EVALUATION</span><b>Every 200 iterations</b></article>
+        <article><span>TRAINING</span><b>Hyperparameter tuned</b></article>
+      </div>
+    </div>
+
+    <figure class="paper-figure">
+      <img src="paddy-assets/detectron2-architecture.jpg" alt="Detectron2 architecture from the IEEE paper" />
+      <figcaption>Detectron2 architecture shown in the paper.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="results" class="pd-section results-section">
+  <div class="pd-container">
+    <div class="section-index">05 · RESULTS</div>
+    <div class="heading-row">
+      <h2>Detectron2 reached 97% accuracy at 3,000 iterations.</h2>
+      <p>
+        The reported Detectron2 result improved from 90% at 2,000 iterations to 97% at
+        3,000 iterations, outperforming the other tested configurations reported in the study.
+      </p>
+    </div>
+
+    <div class="result-strip">
+      <article><span>2,000 ITERATIONS</span><b>90%</b><small>Detectron2 accuracy</small></article>
+      <div class="arrow">→</div>
+      <article class="winner"><span>3,000 ITERATIONS</span><b>97%</b><small>Detectron2 accuracy</small></article>
+      <article><span>BEST CNN BENCHMARK</span><b>92%</b><small>CNN / DenseNet121 / Xception at 50 epochs</small></article>
+    </div>
+
+    <div class="result-gallery">
+      <figure class="paper-figure">
+        <img src="paddy-assets/detectron-training.jpg" alt="Detectron2 training phase from the IEEE paper" />
+        <figcaption>Detectron2 training-phase example from the paper.</figcaption>
+      </figure>
+
+      <figure class="paper-figure">
+        <img src="paddy-assets/detectron-testing.jpg" alt="Detectron2 testing phase from the IEEE paper" />
+        <figcaption>Detectron2 testing-phase example from the paper.</figcaption>
+      </figure>
+
+      <figure class="paper-figure">
+        <img src="paddy-assets/detectron-image-quality.jpg" alt="Detectron2 result illustrating image-quality sensitivity" />
+        <figcaption>The paper notes that detection accuracy depends on image clarity.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="pd-section workflow-section">
+  <div class="pd-container">
+    <div class="section-index">06 · END-TO-END RESEARCH WORKFLOW</div>
+    <h2>From raw leaf images to evaluated disease predictions.</h2>
+
+    <div class="workflow">
+      <article><i>01</i><b>Data Collection</b><span>Web + Kaggle leaf imagery</span></article>
+      <strong>→</strong>
+      <article><i>02</i><b>Preprocessing</b><span>Formatting + augmentation</span></article>
+      <strong>→</strong>
+      <article><i>03</i><b>Model Training</b><span>CNNs + transfer learning + Detectron2</span></article>
+      <strong>→</strong>
+      <article><i>04</i><b>Hyperparameter Tuning</b><span>Learning rate, iterations, classes</span></article>
+      <strong>→</strong>
+      <article><i>05</i><b>Evaluation</b><span>Accuracy and model comparison</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="impact" class="pd-section impact-section">
+  <div class="pd-container">
+    <div class="section-index">07 · WHY IT MATTERS</div>
+    <div class="heading-row">
+      <h2>Computer vision can support faster crop-health decisions.</h2>
+      <p>
+        Automated disease recognition can reduce dependence on subjective manual inspection and
+        provide a foundation for scalable agricultural monitoring and decision support.
+      </p>
+    </div>
+
+    <div class="impact-grid">
+      <div>✓ Earlier disease recognition</div>
+      <div>✓ Reduced manual inspection burden</div>
+      <div>✓ Scalable image-based screening</div>
+      <div>✓ Support for crop-health monitoring</div>
+      <div>✓ Transfer learning for limited datasets</div>
+      <div>✓ Foundation for API / web deployment</div>
+    </div>
+  </div>
+</section>
+
+<section class="pd-section limitations-section">
+  <div class="pd-container">
+    <div class="section-index">08 · LIMITATIONS & NEXT STEPS</div>
+    <h2>Field deployment needs broader data and stronger robustness.</h2>
+
+    <div class="limitations-grid">
+      <article><span>01</span><h3>Image quality</h3><p>The paper explicitly shows that prediction quality depends on how clear the image is.</p></article>
+      <article><span>02</span><h3>Dataset scale</h3><p>More diverse disease examples would improve generalization to harder field conditions.</p></article>
+      <article><span>03</span><h3>Disease coverage</h3><p>The authors identify adding more disease classes as a future direction.</p></article>
+      <article><span>04</span><h3>Deployment</h3><p>The conclusion proposes combining the workflow into an API or website for practical use.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="publication" class="pd-section publication-section">
+  <div class="pd-container publication-card">
+    <div>
+      <div class="section-index">09 · IEEE PUBLICATION</div>
+      <h2>A Cutting Edge Deep Learning Models for Paddy Leaf Disease Detection and Classification</h2>
+      <p class="authors">A. Dhanalakshmi · K. Ponmozhi · <strong>A. Ajmal</strong></p>
+
+      <div class="publication-meta">
+        <span>2024 3rd IEEE International Conference on Artificial Intelligence for Internet of Things (AIIoT 2024)</span>
+        <code>DOI: 10.1109/AIIoT58432.2024.10574681</code>
+      </div>
+    </div>
+
+    <a class="btn primary large" href="https://doi.org/10.1109/AIIoT58432.2024.10574681" target="_blank" rel="noopener">Read IEEE Paper ↗</a>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="pd-container">
+    <div class="kicker">COMPUTER VISION · AGRICULTURE AI · DEEP LEARNING</div>
+    <h2>Applying computer vision to practical crop-health problems.</h2>
+    <div class="hero-actions center">
+      <a class="btn primary" href="mailto:ajmalimra.a@gmail.com">Contact Ajmal</a>
+      <a class="btn" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="Ajmal_Abbas_Resume.pdf" target="_blank">Resume ↗</a>
+      <a class="btn" href="index.html">← Back to Portfolio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="pd-container footer-inner">
+    <span>© 2026 Ajmal Abbas</span>
+    <span>Paddy Leaf Disease Detection · IEEE AIIoT 2024</span>
+  </div>
+</footer>
+
+</body>
+</html>

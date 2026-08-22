@@ -118,3 +118,27 @@ Integration:
 - Main publication card for VulStyle links to the case study.
 - Publication status updated to IEEE/IFIP DSN 2026 · Accepted.
 - Research figures are extracted directly from the uploaded paper; no generated research images are used.
+
+
+## Paddy Leaf Disease Detection - IEEE AIIoT 2024
+
+Added a complete published computer-vision case study.
+
+New files:
+- paddy-leaf-disease.html
+- paddy.css
+- paddy-assets/leaf-samples.jpg
+- paddy-assets/detectron2-architecture.jpg
+- paddy-assets/model-comparison-table.jpg
+- paddy-assets/detectron-training.jpg
+- paddy-assets/detectron-testing.jpg
+- paddy-assets/detectron-image-quality.jpg
+
+Homepage integration:
+- Added a new clickable Paddy Leaf Disease Detection project card.
+- Existing Paddy publication card is now clickable.
+- Project grid adjusted to 3 columns on desktop for five project cards.
+
+Source:
+2024 IEEE AIIoT paper, DOI 10.1109/AIIoT58432.2024.10574681.
+All research visuals on the case-study page are extracted from the uploaded IEEE paper.
