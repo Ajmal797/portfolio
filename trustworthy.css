@@ -498,3 +498,34 @@ footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.06)}
   object-fit:contain;
   background:#fff;
 }
+
+
+/* =========================================================
+   FINAL FIGURE 2 FIX
+   The source image is now cropped to the diagram only.
+   Keep the complete diagram visible at all viewport sizes.
+   ========================================================= */
+.framework-section .paper-figure.framework-figure,
+.framework-section .paper-figure {
+  width: min(1180px, 100%);
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.framework-section .paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #ffffff;
+}
+
+@media (max-width: 760px) {
+  .framework-section .paper-figure {
+    width: 100%;
+  }
+}

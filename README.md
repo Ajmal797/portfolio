@@ -33,3 +33,12 @@ Keep both `marine-assets/` and `trust-assets/` as folders.
 - Homepage Trustworthy AI card verified clickable.
 - Ajmal Abbas shown as Lead / First Author.
 - Figure 2 (proposed reliability-aware framework) re-cropped directly from page 3 of the IEEE paper and correctly placed.
+
+
+## Requested final fixes
+- Figure 2 on the Trustworthy AI page is cropped to the actual proposed framework only.
+  No surrounding IEEE paper text is visible, and the complete diagram is preserved.
+- NeuralSeek experience date changed to JUL 2026 — AUG 2026.
+- Post Graduate Program GPA added: 3.7 / 4.0.
+- Bachelor's in Data Science GPA added: 3.8 / 4.0.
+- Trustworthy AI homepage card remains clickable.
