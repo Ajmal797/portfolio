@@ -55,3 +55,8 @@
 @media(max-width:560px){
   .project-grid{grid-template-columns:1fr}
 }
+
+/* Marine master's thesis publication */
+.thesis-publication-card{border-color:rgba(77,201,255,.22)}
+.thesis-pub-meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 13px}
+.thesis-pub-meta span{padding:5px 8px;border-radius:7px;background:rgba(77,201,255,.07);border:1px solid rgba(77,201,255,.12);font-size:9px;color:var(--muted)}
