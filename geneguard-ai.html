@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeneGuard AI | Ajmal Abbas</title>
+  <meta name="description" content="GeneGuard AI case study by Ajmal Abbas — an evidence-grounded genetic disease-risk research prototype combining family-history machine learning, SHAP explainability, ClinVar, GWAS, FastAPI, and NeuralSeek Maestro.">
+  <meta name="author" content="Ajmal Abbas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/geneguard-ai.html">
+  <link rel="stylesheet" href="geneguard.css">
+</head>
+
+<body>
+<header class="gg-nav">
+  <div class="gg-container nav-inner">
+    <a class="brand" href="index.html"><span>AA</span>Ajmal Abbas</a>
+
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#data">Evidence</a>
+      <a href="#models">Models</a>
+      <a href="#xai">XAI</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#validation">Validation</a>
+      <a class="portfolio-link" href="index.html">← Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="gg-hero">
+  <div class="dna-field">
+    <div class="helix helix-a"></div>
+    <div class="helix helix-b"></div>
+    <i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i>
+    <i class="dot d4"></i><i class="dot d5"></i><i class="dot d6"></i>
+  </div>
+
+  <div class="gg-container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">AI · GENOMICS · AGENTIC AI · NEURALSEEK RESEARCH PROJECT</div>
+
+      <div class="gene-title">
+        <div class="gene-shield">DNA</div>
+        <div>
+          <h1>Gene<span>Guard</span></h1>
+          <h2>AI-Assisted Genetic Disease Risk Assessment</h2>
+        </div>
+      </div>
+
+      <p class="hero-lead">
+        An evidence-grounded research prototype combining structured family-history machine learning,
+        SHAP explainability, ClinVar and GWAS evidence, ontology-aware evidence scoring, FastAPI,
+        and NeuralSeek Maestro for interpretable genetic disease-risk intelligence.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#models">Explore Results ↓</a>
+        <a class="btn" href="#architecture">System Architecture ↓</a>
+        <a class="btn" href="index.html">← Portfolio</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel">
+      <div class="panel-row">
+        <div class="panel-icon">◎</div>
+        <div>
+          <span>RESEARCHER / DEVELOPER</span>
+          <strong>Ajmal Abbas</strong>
+          <small>AI Agent Developer Intern · NeuralSeek</small>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel-icon">⌘</div>
+        <div>
+          <span>CORE SYSTEM</span>
+          <strong>ML + Evidence + Agentic AI</strong>
+          <small>Family-history prediction with grounded genomic evidence</small>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel-icon">◇</div>
+        <div>
+          <span>GENOMIC SOURCES</span>
+          <strong>ClinVar + GWAS Catalog</strong>
+          <small>Curated variant evidence + statistical association evidence</small>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel-icon">✦</div>
+        <div>
+          <span>EXPLAINABILITY</span>
+          <strong>SHAP + Evidence Traceability</strong>
+          <small>Feature contributions linked to supporting research evidence</small>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="gg-container hero-metrics">
+    <div><b>4</b><span>Inherited Diseases</span></div>
+    <div><b>4</b><span>Disease-Specific ML Models</span></div>
+    <div><b>0.9955–1.000</b><span>Test ROC-AUC Range</span></div>
+    <div><b>1.82M+</b><span>ClinVar Records Loaded</span></div>
+    <div><b>1.18M+</b><span>GWAS Records Loaded</span></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="gg-section problem-section">
+  <div class="gg-container problem-grid">
+    <div>
+      <div class="section-index">01 · RESEARCH PROBLEM</div>
+      <h2>Genetic risk evidence is fragmented across data, family history, and expert interpretation.</h2>
+
+      <p class="section-copy">
+        Genomic disease evidence can be distributed across resources such as ClinVar and the GWAS Catalog,
+        while family history provides patient-specific context that is often unstructured. GeneGuard explores
+        whether these evidence streams can be integrated into an explainable research workflow for inherited
+        disease-risk assessment.
+      </p>
+    </div>
+
+    <div class="problem-cards">
+      <article><span>01</span><h3>Fragmented evidence</h3><p>Variant-level and statistical genetic evidence live in different knowledge sources.</p></article>
+      <article><span>02</span><h3>Unstructured family history</h3><p>Relationship degree, lineage, early onset, and diagnosis age need consistent representation.</p></article>
+      <article><span>03</span><h3>Interpretability barrier</h3><p>A prediction alone is not enough; users need understandable factors and traceable evidence.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- DISEASES -->
+<section class="gg-section disease-section">
+  <div class="gg-container">
+    <div class="section-index">02 · INITIAL DISEASE SCOPE</div>
+
+    <div class="heading-row">
+      <h2>Four inherited diseases with different familial patterns.</h2>
+      <p>
+        The initial research phase evaluates disease-specific models rather than forcing one model
+        to represent all hereditary conditions.
+      </p>
+    </div>
+
+    <div class="disease-grid">
+      <article class="lynch">
+        <div class="disease-icon">L</div>
+        <span>HEREDITARY CANCER</span>
+        <h3>Lynch Syndrome</h3>
+        <p>Hereditary colorectal cancer syndrome.</p>
+        <b>Best model: Logistic Regression</b>
+      </article>
+
+      <article class="fh">
+        <div class="disease-icon">FH</div>
+        <span>LIPID / CARDIOVASCULAR</span>
+        <h3>Familial Hypercholesterolemia</h3>
+        <p>Inherited high cholesterol associated with early cardiovascular disease.</p>
+        <b>Best model: Gradient Boosting</b>
+      </article>
+
+      <article class="hcm">
+        <div class="disease-icon">H</div>
+        <span>CARDIOMYOPATHY</span>
+        <h3>Hypertrophic Cardiomyopathy</h3>
+        <p>Inherited heart-muscle disease.</p>
+        <b>Best model: Random Forest</b>
+      </article>
+
+      <article class="brugada">
+        <div class="disease-icon">B</div>
+        <span>ARRHYTHMIA</span>
+        <h3>Brugada Syndrome</h3>
+        <p>Inherited cardiac arrhythmia disorder.</p>
+        <b>Best model: Random Forest</b>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DATA FOUNDATION -->
+<section id="data" class="gg-section data-section">
+  <div class="gg-container">
+    <div class="section-index">03 · DATA & EVIDENCE FOUNDATION</div>
+
+    <div class="heading-row">
+      <h2>Three complementary evidence layers.</h2>
+      <p>
+        GeneGuard combines curated clinical variant evidence, genome-wide association evidence,
+        and structured family-history information into one research representation.
+      </p>
+    </div>
+
+    <div class="source-grid">
+      <article>
+        <div class="source-icon blue">DNA</div>
+        <span>CLINVAR</span>
+        <h3>Clinical Variant Evidence</h3>
+        <ul>
+          <li>Variant clinical significance</li>
+          <li>Pathogenic / likely pathogenic classifications</li>
+          <li>Gene–disease relationships</li>
+          <li>Review status and expert-panel evidence</li>
+          <li>Variant-level clinical assertions</li>
+        </ul>
+        <div class="source-stat"><b>1,823,000</b><small>rows loaded in the notebook</small></div>
+      </article>
+
+      <article>
+        <div class="source-icon green">GWAS</div>
+        <span>GWAS CATALOG</span>
+        <h3>Association Evidence</h3>
+        <ul>
+          <li>SNP–trait / disease associations</li>
+          <li>P-values and effect sizes</li>
+          <li>Mapped risk loci and genes</li>
+          <li>Publication and study metadata</li>
+          <li>Population and sample information</li>
+        </ul>
+        <div class="source-stat"><b>1,182,135</b><small>rows loaded in the notebook</small></div>
+      </article>
+
+      <article>
+        <div class="source-icon violet">FAM</div>
+        <span>FAMILY HISTORY</span>
+        <h3>Familial Evidence</h3>
+        <ul>
+          <li>Affected relatives and relationship degree</li>
+          <li>Maternal / paternal lineage</li>
+          <li>Age at diagnosis and early onset</li>
+          <li>Genetic testing and known variants</li>
+          <li>Information confirmation and completeness</li>
+        </ul>
+        <div class="source-stat"><b>Structured</b><small>from user / research input</small></div>
+      </article>
+    </div>
+
+    <div class="evidence-flow">
+      <span>ClinVar</span><i>+</i><span>GWAS</span><i>+</i><span>Family History</span>
+      <b>→</b>
+      <strong>Integrated Evidence</strong>
+      <b>→</b>
+      <span>ML-Ready Features</span>
+    </div>
+  </div>
+</section>
+
+<!-- MODEL DEVELOPMENT -->
+<section id="models" class="gg-section model-section">
+  <div class="gg-container">
+    <div class="section-index">04 · DISEASE-SPECIFIC MACHINE LEARNING</div>
+
+    <div class="heading-row">
+      <h2>Model selection is performed separately for each disease.</h2>
+      <p>
+        Candidate algorithms and feature sets were compared on validation data, then evaluated on held-out
+        test data. The notebook confirms four selected disease-specific models with no family leakage reported.
+      </p>
+    </div>
+
+    <div class="model-table-wrap">
+      <table class="model-table">
+        <thead>
+          <tr>
+            <th>Disease</th>
+            <th>Selected Model</th>
+            <th>Feature Set</th>
+            <th>Test Accuracy</th>
+            <th>Test F1</th>
+            <th>Test ROC-AUC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lynch syndrome</td>
+            <td><b>Logistic Regression</b></td>
+            <td>Family history without derived summaries</td>
+            <td>0.9867</td>
+            <td>0.9872</td>
+            <td class="score">1.0000</td>
+          </tr>
+          <tr>
+            <td>Familial hypercholesterolemia</td>
+            <td><b>Gradient Boosting</b></td>
+            <td>Family history without derived summaries</td>
+            <td>0.9667</td>
+            <td>0.9669</td>
+            <td class="score">0.9961</td>
+          </tr>
+          <tr>
+            <td>Hypertrophic cardiomyopathy</td>
+            <td><b>Random Forest</b></td>
+            <td>Combined</td>
+            <td>0.9733</td>
+            <td>0.9706</td>
+            <td class="score">0.9955</td>
+          </tr>
+          <tr>
+            <td>Brugada syndrome</td>
+            <td><b>Random Forest</b></td>
+            <td>Family history without derived summaries</td>
+            <td>0.9800</td>
+            <td>0.9781</td>
+            <td class="score">0.9987</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="model-notes">
+      <article><span>CANDIDATES</span><h3>Multiple ML algorithms</h3><p>Logistic Regression, Decision Tree, Random Forest, Gradient Boosting and disease-specific comparisons.</p></article>
+      <article><span>VALIDATION</span><h3>Train / validation / test</h3><p>Performance was compared across feature sets before selecting the best disease-specific configuration.</p></article>
+      <article><span>METRICS</span><h3>Beyond accuracy</h3><p>Accuracy, precision, recall, F1, ROC-AUC, PR-AUC, specificity, and confusion-matrix analysis were considered in the research design.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- XAI -->
+<section id="xai" class="gg-section xai-section">
+  <div class="gg-container">
+    <div class="section-index">05 · EXPLAINABLE AI</div>
+
+    <div class="heading-row">
+      <h2>Predictions are paired with feature-level explanations.</h2>
+      <p>
+        SHAP and permutation importance are used to expose which family-history features influence
+        model behavior. The notebook implements both global explanations and local explanations for
+        individual elevated- and lower-pattern examples.
+      </p>
+    </div>
+
+    <div class="xai-highlight">
+      <div>
+        <span>FAMILIAL HYPERCHOLESTEROLEMIA</span>
+        <h3>Global SHAP explanation</h3>
+        <p>
+          The Gradient Boosting model emphasizes early-onset counts, diagnosis ages,
+          and affected-relative patterns as influential family-history signals.
+        </p>
+
+        <div class="xai-features">
+          <b>First-degree early onset</b>
+          <b>Second-degree early onset</b>
+          <b>Average diagnosis age</b>
+          <b>Affected-relative count</b>
+          <b>Youngest diagnosis age</b>
+        </div>
+      </div>
+
+      <figure class="research-figure">
+        <img src="geneguard-assets/fh-shap-global.jpg" alt="GeneGuard global SHAP feature importance for familial hypercholesterolemia">
+        <figcaption>Actual global SHAP output from the GeneGuard notebook.</figcaption>
+      </figure>
+    </div>
+
+    <div class="xai-grid">
+      <figure class="research-figure">
+        <img src="geneguard-assets/fh-shap-beeswarm.jpg" alt="GeneGuard SHAP beeswarm plot">
+        <figcaption>Global SHAP beeswarm: feature value and direction of model influence.</figcaption>
+      </figure>
+
+      <figure class="research-figure">
+        <img src="geneguard-assets/fh-shap-elevated.jpg" alt="GeneGuard SHAP waterfall for elevated familial pattern example">
+        <figcaption>Local explanation for an elevated familial-pattern example (model probability 0.9997).</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- GENOMIC EVIDENCE -->
+<section class="gg-section genomic-section">
+  <div class="gg-container">
+    <div class="section-index">06 · ONTOLOGY-AWARE GENOMIC EVIDENCE</div>
+
+    <div class="heading-row">
+      <h2>Database matches are not treated as equally strong evidence.</h2>
+      <p>
+        The notebook evolves the genomic layer from simple retrieval into an ontology-aware evidence engine
+        that separates exact disease evidence, disease-defining phenotype evidence, contextual traits,
+        and cross-source gene support.
+      </p>
+    </div>
+
+    <div class="ontology-legend">
+      <div><span>A</span><b>Exact Disease</b><small>Direct or near-exact disease terminology</small></div>
+      <div><span>B</span><b>Disease-Defining Phenotype</b><small>Closely related phenotype supporting the disease mechanism</small></div>
+      <div><span>C</span><b>Contextual Trait</b><small>Relevant but less direct contextual association</small></div>
+    </div>
+
+    <div class="evidence-table-wrap">
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Disease</th>
+            <th>ClinVar Score</th>
+            <th>GWAS Exact</th>
+            <th>GWAS Phenotype</th>
+            <th>Cross-Source</th>
+            <th>Overall Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Lynch syndrome</td><td>100.00</td><td>0.00</td><td>16.00</td><td>27.00</td><td><b>45.57</b></td></tr>
+          <tr><td>Familial hypercholesterolemia</td><td>89.41</td><td>0.00</td><td>87.81</td><td>46.25</td><td><b>62.74</b></td></tr>
+          <tr><td>Hypertrophic cardiomyopathy</td><td>90.82</td><td>70.70</td><td>20.59</td><td>19.55</td><td><b>58.61</b></td></tr>
+          <tr><td>Brugada syndrome</td><td>81.64</td><td>56.44</td><td>0.00</td><td>36.67</td><td><b>50.96</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gene-support">
+      <article><span>LYNCH</span><h3>MLH1</h3><p>Disease-defining cross-source support identified in the ontology-aware audit.</p></article>
+      <article><span>FAMILIAL HYPERCHOLESTEROLEMIA</span><h3>APOB · LDLRAP1 · PCSK9</h3><p>Defining overlap across retrieved ClinVar/GWAS evidence.</p></article>
+      <article><span>HCM</span><h3>ACTN2 · FLNC</h3><p>Cross-source disease evidence represented by overlapping genes.</p></article>
+      <article><span>BRUGADA</span><h3>SCN5A · SCN10A</h3><p>Exact cross-source overlap found in the ontology-aware evidence engine.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture" class="gg-section architecture-section">
+  <div class="gg-container">
+    <div class="section-index">07 · END-TO-END SYSTEM ARCHITECTURE</div>
+
+    <div class="heading-row">
+      <h2>Predictive ML is separated from agentic reasoning.</h2>
+      <p>
+        The research design keeps risk prediction deterministic and auditable, while NeuralSeek Maestro
+        orchestrates structured input, evidence retrieval, API calls, and evidence-grounded explanations.
+      </p>
+    </div>
+
+    <div class="architecture-flow">
+      <article>
+        <div class="arch-num">1</div>
+        <div class="arch-icon">DB</div>
+        <h3>Data Sources</h3>
+        <p>ClinVar · GWAS Catalog · Family History</p>
+      </article>
+      <i>→</i>
+
+      <article>
+        <div class="arch-num">2</div>
+        <div class="arch-icon">FX</div>
+        <h3>Processing & Features</h3>
+        <p>Cleaning · mapping · evidence aggregation · family-history encoding</p>
+      </article>
+      <i>→</i>
+
+      <article class="ml">
+        <div class="arch-num">3</div>
+        <div class="arch-icon">ML</div>
+        <h3>Risk Prediction</h3>
+        <p>Disease-specific model · probability · confidence · SHAP</p>
+      </article>
+      <i>→</i>
+
+      <article>
+        <div class="arch-num">4</div>
+        <div class="arch-icon">API</div>
+        <h3>FastAPI</h3>
+        <p>Validated request · model inference · JSON response</p>
+      </article>
+      <i>→</i>
+
+      <article class="agent">
+        <div class="arch-num">5</div>
+        <div class="arch-icon">AI</div>
+        <h3>NeuralSeek Maestro</h3>
+        <p>Workflow orchestration · evidence retrieval · grounded explanation</p>
+      </article>
+      <i>→</i>
+
+      <article>
+        <div class="arch-num">6</div>
+        <div class="arch-icon">UI</div>
+        <h3>User Output</h3>
+        <p>Risk summary · key factors · supporting evidence · limitations</p>
+      </article>
+    </div>
+
+    <div class="trust-strip">
+      <span>Evidence Traceability</span>
+      <span>Deterministic ML Prediction</span>
+      <span>Grounded Explanation</span>
+      <span>Auditability</span>
+      <span>Privacy & Security Design</span>
+    </div>
+  </div>
+</section>
+
+<!-- END TO END DEMO -->
+<section class="gg-section demo-section">
+  <div class="gg-container">
+    <div class="section-index">08 · END-TO-END PROTOTYPE</div>
+
+    <div class="heading-row">
+      <h2>Family input becomes a structured, explainable evidence report.</h2>
+      <p>
+        The notebook validates the complete research path: family input → engineered features →
+        ML prediction → SHAP → ClinVar → GWAS → ontology-aware evidence → final report.
+      </p>
+    </div>
+
+    <div class="demo-flow">
+      <div><b>1</b><span>User family history</span></div><i>→</i>
+      <div><b>2</b><span>Structured features</span></div><i>→</i>
+      <div><b>3</b><span>Disease-specific ML</span></div><i>→</i>
+      <div><b>4</b><span>SHAP explanation</span></div><i>→</i>
+      <div><b>5</b><span>ClinVar + GWAS evidence</span></div><i>→</i>
+      <div><b>6</b><span>Grounded research report</span></div>
+    </div>
+
+    <div class="demo-grid">
+      <div class="demo-report">
+        <span>INTERACTIVE NOTEBOOK EXAMPLE</span>
+        <h3>Familial Hypercholesterolemia</h3>
+
+        <div class="report-row"><b>Selected model</b><strong>Gradient Boosting</strong></div>
+        <div class="report-row"><b>Input example</b><strong>Father affected · paternal side</strong></div>
+        <div class="report-row"><b>Predicted probability</b><strong>11.66%</strong></div>
+        <div class="report-row"><b>Research category</b><strong>Lower predicted familial pattern</strong></div>
+
+        <p>
+          The system then generates SHAP contributions and attaches genomic evidence summaries
+          rather than returning an unexplained probability alone.
+        </p>
+      </div>
+
+      <figure class="research-figure">
+        <img src="geneguard-assets/interactive-shap.jpg" alt="Interactive GeneGuard end-to-end SHAP output">
+        <figcaption>Actual visualization from the interactive GeneGuard notebook workflow.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- VALIDATION -->
+<section id="validation" class="gg-section validation-section">
+  <div class="gg-container">
+    <div class="section-index">09 · VALIDATION STATUS & RESEARCH DIRECTION</div>
+
+    <div class="heading-row">
+      <h2>A functioning prototype with clearly separated next-stage validation.</h2>
+      <p>
+        The research materials distinguish completed prototype components from planned scientific validation
+        and production-oriented work. This distinction is preserved here rather than presenting future work as finished.
+      </p>
+    </div>
+
+    <div class="status-grid">
+      <article class="complete">
+        <span>WORKING / VALIDATED IN NOTEBOOK</span>
+        <ul>
+          <li>ClinVar + GWAS data integration</li>
+          <li>Family-history feature engineering</li>
+          <li>Four disease-specific models selected</li>
+          <li>SHAP / permutation explainability</li>
+          <li>Ontology-aware genomic evidence engine</li>
+          <li>Interactive end-to-end research test</li>
+          <li>Deployment artifact bundle saved and reloaded successfully</li>
+        </ul>
+      </article>
+
+      <article class="next">
+        <span>RESEARCH NEXT STEPS</span>
+        <ul>
+          <li>Broader hyperparameter optimization</li>
+          <li>Source-wise ablation experiments</li>
+          <li>External validation / robustness studies</li>
+          <li>Expanded explainability evaluation</li>
+          <li>LLM grounding / hallucination evaluation</li>
+          <li>Production security and deployment hardening</li>
+          <li>User / clinician validation</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="research-question">
+      <span>CENTRAL RESEARCH QUESTION</span>
+      <strong>
+        Does integrating ClinVar and GWAS evidence with structured family history using machine learning
+        provide more accurate and interpretable disease-risk assessments than individual evidence sources alone?
+      </strong>
+    </div>
+  </div>
+</section>
+
+<!-- RESPONSIBLE USE -->
+<section class="gg-section responsible-section">
+  <div class="gg-container">
+    <div class="section-index">10 · RESPONSIBLE USE</div>
+    <h2>This is a research prototype—not a diagnostic system.</h2>
+
+    <div class="responsible-grid">
+      <article><span>01</span><h3>Synthetic family records</h3><p>The family-history probability models were trained using synthetic family-history records.</p></article>
+      <article><span>02</span><h3>Knowledge summarization</h3><p>The genomic layer summarizes the supplied ClinVar and GWAS datasets; it does not sequence or interpret an individual's genome.</p></article>
+      <article><span>03</span><h3>No clinical diagnosis</h3><p>Outputs are research-oriented model and evidence summaries and must not be used for diagnosis or treatment selection.</p></article>
+      <article><span>04</span><h3>Evidence transparency</h3><p>The system exposes evidence coverage, warnings, feature contributions, and limitations instead of presenting a single opaque score.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- NEURALSEEK -->
+<section class="gg-section neuralseek-section">
+  <div class="gg-container project-card">
+    <div>
+      <div class="section-index">11 · NEURALSEEK RESEARCH PROJECT</div>
+      <h2>GeneGuard AI</h2>
+      <p>
+        Developed during my AI Agent Developer internship at NeuralSeek as a research prototype exploring
+        how machine learning, genomic evidence, explainable AI, APIs, and agentic orchestration can be combined
+        into a grounded genetic disease-risk intelligence workflow.
+      </p>
+
+      <div class="project-tags">
+        <span>Python</span><span>Scikit-learn</span><span>SHAP</span><span>ClinVar</span>
+        <span>GWAS</span><span>FastAPI</span><span>NeuralSeek Maestro</span><span>Agentic AI</span>
+      </div>
+    </div>
+
+    <a class="btn primary large" href="index.html#experience">View Experience ↗</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final-cta">
+  <div class="gg-container">
+    <div class="kicker">AI · GENOMICS · EXPLAINABILITY · AGENTIC SYSTEMS</div>
+    <h2>Building evidence-grounded AI systems that connect prediction with explanation.</h2>
+
+    <div class="hero-actions center">
+      <a class="btn primary" href="mailto:ajmalimra.a@gmail.com">Contact Ajmal</a>
+      <a class="btn" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="Ajmal_Abbas_Resume.pdf" target="_blank">Resume ↗</a>
+      <a class="btn" href="index.html">← Back to Portfolio</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="gg-container footer-inner">
+    <span>© 2026 Ajmal Abbas</span>
+    <span>GeneGuard AI · Research Prototype</span>
+  </div>
+</footer>
+
+</body>
+</html>

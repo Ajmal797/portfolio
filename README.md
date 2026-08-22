@@ -42,3 +42,25 @@ Keep both `marine-assets/` and `trust-assets/` as folders.
 - Post Graduate Program GPA added: 3.7 / 4.0.
 - Bachelor's in Data Science GPA added: 3.8 / 4.0.
 - Trustworthy AI homepage card remains clickable.
+
+
+## GeneGuard AI case study
+
+Added a complete GeneGuard research case study grounded in the user's GeneGuard PDF
+and working notebook.
+
+New files:
+- geneguard-ai.html
+- geneguard.css
+- geneguard-assets/fh-shap-global.jpg
+- geneguard-assets/fh-shap-beeswarm.jpg
+- geneguard-assets/fh-shap-elevated.jpg
+- geneguard-assets/fh-shap-lower.jpg
+- geneguard-assets/interactive-shap.jpg
+
+The main portfolio GeneGuard card links to geneguard-ai.html.
+
+Important responsible-use wording is preserved:
+- family-history models are research models trained on synthetic family records
+- genomic evidence summarizes ClinVar/GWAS datasets
+- the system is not a clinical diagnostic or treatment tool
