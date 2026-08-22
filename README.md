@@ -1,28 +1,21 @@
-# Ajmal Abbas Portfolio — V5
+# Ajmal Abbas Portfolio — Finished Marine Case Study
 
-This package keeps the full V3 portfolio and marine case-study structure,
-but replaces the marine case-study hero with the cleaner version based on
-the approved screenshot.
+This package keeps the current portfolio homepage and finishes the full marine case-study page in real HTML/CSS.
 
-## Upload to GitHub
+## Marine page sections
+- Hero / researcher profile
+- Challenge & research question
+- Research workflow
+- Dataset & study structure
+- Model development / architecture
+- Results
+- Spatial generalization
+- Impact
+- Research context
+- Master's thesis / DOI
+- Final contact CTA
 
-Upload everything in this folder to the root of your `portfolio` repository.
+No thesis slide screenshots are used in the finished layout, so slide numbers and university branding do not appear inside the case-study visuals.
 
-Important:
-- keep `marine-assets/` as a folder
-- `marine-emulator.html` stays in the repository root
-- `marine.css` stays in the repository root
-- the homepage `index.html` already links the marine research card to `marine-emulator.html`
-
-## Main files
-
-- index.html
-- styles.css
-- script.js
-- marine-emulator.html
-- marine.css
-- profile.jpg
-- Ajmal_Abbas_Resume.pdf
-- robots.txt
-- sitemap.xml
-- marine-assets/
+## GitHub upload
+Upload all files in this folder to the root of the `portfolio` repository.

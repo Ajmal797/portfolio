@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marine Ecosystem Emulator | Ajmal Abbas</title>
-  <meta name="description" content="Case study: Ajmal Abbas developed a scalable machine-learning ecosystem emulator for Northeast U.S. Atlantis simulations, using ~3.4M records across 544 simulations and 22 spatial polygons.">
-  <meta name="author" content="Ajmal Abbas">
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="marine.css">
+  <meta name="description" content="Scientific AI case study by Ajmal Abbas: a machine-learning emulator for Northeast U.S. Atlantis ecosystem simulations, using ~3.4M records across 544 simulations and 22 spatial polygons." />
+  <meta name="author" content="Ajmal Abbas" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://portfolio.ajmalimra-a.workers.dev/marine-emulator.html" />
+  <link rel="stylesheet" href="marine.css" />
 </head>
+
 <body>
 <header class="marine-nav">
   <div class="case-container nav-inner">
-    <a class="case-brand" href="index.html"><span>AA</span> Ajmal Abbas</a>
-    <div class="case-nav-links">
-      <a href="#problem">Problem</a><a href="#data">Data</a><a href="#method">Method</a><a href="#results">Results</a><a href="#impact">Impact</a>
+    <a class="case-brand" href="index.html"><span>AA</span>Ajmal Abbas</a>
+    <nav class="case-nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#data">Data</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#impact">Impact</a>
       <a class="back-link" href="index.html">← Portfolio</a>
-    </div>
+    </nav>
   </div>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="case-hero hero-v5">
-  <div class="hero-v5-bg"></div>
+  <div class="hero-ocean hero-ocean-a"></div>
+  <div class="hero-ocean hero-ocean-b"></div>
   <div class="case-container hero-v5-grid">
+
     <div class="hero-v5-copy">
       <div class="case-kicker">SCIENTIFIC AI · MARINE ECOSYSTEM MODELING</div>
-      <h1>Emulating<br>Marine<br><span>Ecosystem<br>Dynamics</span></h1>
-      <p class="hero-v5-subtitle">A Machine Learning Approach for Biomass Prediction and Forecasting</p>
+
+      <h1>
+        Emulating<br>
+        Marine<br>
+        <span>Ecosystem<br>Dynamics</span>
+      </h1>
+
+      <p class="hero-v5-subtitle">
+        A Machine Learning Approach for Biomass Prediction and Forecasting
+      </p>
+
       <p class="hero-v5-lead">
-        Developed a scalable machine-learning ecosystem emulator for the Northeast U.S. Atlantis model—
-        delivering highly accurate biomass prediction and long-term forecasting while reducing the
-        computational burden of repeated ecosystem simulations.
+        Developed a scalable machine-learning ecosystem emulator for the Northeast U.S.
+        Atlantis model—delivering highly accurate biomass prediction and long-term
+        forecasting while reducing the computational burden of repeated ecosystem simulations.
       </p>
 
       <div class="hero-buttons">
@@ -53,7 +72,7 @@
       </div>
 
       <div class="hero-v5-profile">
-        <div class="hero-v5-icon">♟</div>
+        <div class="hero-v5-icon">⚗</div>
         <div>
           <span>ROLE</span>
           <strong>Graduate Research Assistant</strong>
@@ -90,153 +109,466 @@
   </div>
 </section>
 
-
-<section id="problem" class="case-section">
-  <div class="case-container split">
+<!-- PROBLEM -->
+<section id="problem" class="case-section problem-section">
+  <div class="case-container problem-grid">
     <div>
       <div class="section-index">01 · THE CHALLENGE</div>
       <h2>Complex ecosystem models are scientifically powerful—but computationally demanding.</h2>
+      <p class="section-copy">
+        Atlantis represents multispecies interactions, fishing pressure, environmental variability,
+        and spatial ecosystem structure. That ecological realism is valuable for ecosystem analysis,
+        but repeated simulations can require substantial computation and limit rapid scenario exploration.
+      </p>
     </div>
-    <div class="body-copy">
-      <p>Atlantis represents multispecies interactions, fishing pressure, environmental variability, and spatial ecosystem structure. That ecological richness makes it valuable for ecosystem analysis, but repeated simulations can require substantial computation and limit rapid scenario exploration.</p>
-      <div class="question-card"><span>Research question</span><strong>Can machine learning learn Atlantis ecosystem behavior and deliver accurate biomass predictions and forecasts at a fraction of the computational cost?</strong></div>
+
+    <div class="problem-visual">
+      <div class="sonar-disc">
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="ring ring3"></div>
+        <div class="sonar-dot d1"></div>
+        <div class="sonar-dot d2"></div>
+        <div class="sonar-dot d3"></div>
+        <div class="sonar-center">ATLANTIS</div>
+      </div>
+      <div class="research-question">
+        <span>RESEARCH QUESTION</span>
+        <strong>
+          Can machine learning learn Atlantis ecosystem behavior and deliver accurate biomass
+          predictions and forecasts at a fraction of the computational cost?
+        </strong>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="case-section visual-section">
+<!-- WORKFLOW -->
+<section id="workflow" class="case-section workflow-section">
   <div class="case-container">
     <div class="section-index">02 · RESEARCH WORKFLOW</div>
-    <h2>From process-based simulation to a fast data-driven emulator.</h2>
-    <figure class="research-figure wide">
-      <img src="marine-assets/research-workflow.jpg" alt="Research workflow from Atlantis simulations through data preparation, feature engineering, AutoML, validation, and fisheries applications">
-      <figcaption>Research workflow from the final thesis defense.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section id="data" class="case-section">
-  <div class="case-container">
-    <div class="section-index">03 · DATASET</div>
-    <div class="heading-row"><h2>Learning from millions of simulated ecosystem observations.</h2><p>The integrated dataset captures ecological behavior across guilds, space, time, catch, and environmental conditions.</p></div>
-    <div class="stats-grid">
-      <div class="stat"><strong>~3.4M</strong><span>observations</span></div>
-      <div class="stat"><strong>544</strong><span>simulation runs</span></div>
-      <div class="stat"><strong>22</strong><span>NEUS polygons</span></div>
-      <div class="stat"><strong>7</strong><span>functional guilds</span></div>
+    <div class="section-heading-row">
+      <h2>From process-based simulation to a fast data-driven emulator.</h2>
+      <p>
+        An end-to-end workflow connects ecosystem simulations, feature engineering, automated model selection,
+        temporal forecasting, validation, and downstream fisheries applications.
+      </p>
     </div>
-    <figure class="research-figure">
-      <img src="marine-assets/dataset-structure.jpg" alt="Atlantis data structure across guilds, polygons, time, biomass and catch">
-      <figcaption>Dataset structure used to organize ecosystem information across biological, spatial, and temporal dimensions.</figcaption>
-    </figure>
+
+    <div class="workflow-line">
+      <article>
+        <div class="workflow-number">01</div>
+        <div class="workflow-icon">▰</div>
+        <h3>Atlantis Simulations</h3>
+        <p>544 ecosystem simulation runs covering 1964–2020.</p>
+      </article>
+      <span class="workflow-arrow">→</span>
+
+      <article>
+        <div class="workflow-number">02</div>
+        <div class="workflow-icon">◫</div>
+        <h3>Dataset Construction</h3>
+        <p>~3.4M records integrating guild, space, time, catch, and environment.</p>
+      </article>
+      <span class="workflow-arrow">→</span>
+
+      <article>
+        <div class="workflow-number">03</div>
+        <div class="workflow-icon">⚙</div>
+        <h3>Feature Engineering</h3>
+        <p>Lagged biomass, spatial identifiers, temporal index, and environmental variables.</p>
+      </article>
+      <span class="workflow-arrow">→</span>
+
+      <article>
+        <div class="workflow-number">04</div>
+        <div class="workflow-icon">◉</div>
+        <h3>AutoML Prediction</h3>
+        <p>Automated model search for high-performing biomass prediction.</p>
+      </article>
+      <span class="workflow-arrow">→</span>
+
+      <article>
+        <div class="workflow-number">05</div>
+        <div class="workflow-icon">⌁</div>
+        <h3>Forecasting</h3>
+        <p>AutoKeras / LSTM used experimentally for sequential ecosystem dynamics.</p>
+      </article>
+      <span class="workflow-arrow">→</span>
+
+      <article>
+        <div class="workflow-number">06</div>
+        <div class="workflow-icon">✓</div>
+        <h3>Validation</h3>
+        <p>Strict temporal holdout and out-of-sample evaluation.</p>
+      </article>
+      <span class="workflow-arrow">→</span>
+
+      <article>
+        <div class="workflow-number">07</div>
+        <div class="workflow-icon">≈</div>
+        <h3>Fisheries Applications</h3>
+        <p>Fast scenario analysis and future ecosystem decision-support workflows.</p>
+      </article>
+    </div>
   </div>
 </section>
 
+<!-- DATA -->
+<section id="data" class="case-section data-section">
+  <div class="case-container">
+    <div class="section-index">03 · DATASET & STUDY STRUCTURE</div>
+    <div class="section-heading-row">
+      <h2>Learning from millions of simulated ecosystem observations.</h2>
+      <p>
+        The integrated dataset captures ecological behavior across biological guilds, spatial polygons,
+        time, biomass, catch, and environmental conditions.
+      </p>
+    </div>
+
+    <div class="data-layout">
+      <div class="data-facts">
+        <div class="data-fact"><b>544</b><span>Atlantis simulation runs</span></div>
+        <div class="data-fact"><b>~3.4M</b><span>observations</span></div>
+        <div class="data-fact"><b>22</b><span>spatial polygons</span></div>
+        <div class="data-fact"><b>7</b><span>functional guilds</span></div>
+        <div class="data-fact"><b>56 yrs</b><span>1964–2020</span></div>
+      </div>
+
+      <div class="ecosystem-board">
+        <div class="eco-card ec1">
+          <span>1 · GUILD</span>
+          <h3>Functional species groups</h3>
+          <div class="fish-row"><i>◁</i><i>◁</i><i>◁</i><i>◁</i></div>
+          <p>Species grouped by ecological role and function.</p>
+        </div>
+
+        <div class="eco-card ec2">
+          <span>2 · POLYGON</span>
+          <h3>22 spatial regions</h3>
+          <div class="mini-map">
+            <i class="m1">1</i><i class="m2">2</i><i class="m3">3</i><i class="m4">4</i>
+            <i class="m5">5</i><i class="m6">6</i><i class="m7">7</i><i class="m8">8</i>
+          </div>
+        </div>
+
+        <div class="eco-card ec3">
+          <span>3 · TIME</span>
+          <h3>Temporal index</h3>
+          <div class="timeline-mini">
+            <b>1964</b><div class="timeline-track"><i></i><i></i><i></i><i></i><i></i></div><b>2020</b>
+          </div>
+          <p>Annual ecosystem states represented through time.</p>
+        </div>
+
+        <div class="eco-card ec4">
+          <span>4 · BIOMASS</span>
+          <h3>Primary target variable</h3>
+          <div class="bar-mini">
+            <i style="height:20%"></i><i style="height:32%"></i><i style="height:48%"></i>
+            <i style="height:70%"></i><i style="height:56%"></i><i style="height:84%"></i>
+            <i style="height:92%"></i>
+          </div>
+          <p>Biomass is predicted and forecasted by the emulator.</p>
+        </div>
+
+        <div class="eco-card ec5">
+          <span>5 · CATCH</span>
+          <h3>Fishing pressure</h3>
+          <p>Catch information captures harvested marine organisms and supports ecosystem-based fisheries analysis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
 <section id="method" class="case-section method-section">
   <div class="case-container">
     <div class="section-index">04 · MODEL DEVELOPMENT</div>
-    <div class="heading-row"><h2>Automated model selection + ecological feature engineering.</h2><p>The framework combined large-scale preprocessing, lagged and time-aware features, AutoML-based regression, experimental neural architecture search, and strict temporal validation.</p></div>
-    <div class="method-chips"><span>Python</span><span>Scikit-learn</span><span>Extra Trees</span><span>Random Forest</span><span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>AutoML</span><span>AutoKeras</span><span>LSTM</span><span>Time Series</span></div>
-    <figure class="research-figure wide">
-      <img src="marine-assets/emulator-architecture.jpg" alt="Emulator architecture with preprocessing, feature engineering, AutoML prediction, AutoKeras experiment, and evaluation">
-      <figcaption>Emulator architecture from the final thesis defense.</figcaption>
-    </figure>
-    <div class="method-cards">
-      <article><span>Prediction</span><h3>Extra Trees selected through AutoML</h3><p>Candidate models included Random Forest, XGBoost, LightGBM, CatBoost, and Extra Trees. Extra Trees provided the best overall balance for the primary emulator.</p></article>
-      <article><span>Forecasting</span><h3>Experimental AutoKeras / LSTM</h3><p>Automated neural architecture search was explored as a complementary deep-learning framework for learning sequential ecosystem dynamics.</p></article>
-      <article><span>Validation</span><h3>Strict temporal holdout</h3><p>The final five years were held out to evaluate generalization under unseen temporal conditions and reduce leakage risk.</p></article>
+    <div class="section-heading-row">
+      <h2>Automated model selection + ecological feature engineering.</h2>
+      <p>
+        Large-scale preprocessing, lagged and time-aware features, automated model selection,
+        experimental neural architecture search, and strict temporal validation were combined into one framework.
+      </p>
+    </div>
+
+    <div class="method-chips">
+      <span>Python</span><span>Scikit-learn</span><span>Random Forest</span><span>Extra Trees</span>
+      <span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>AutoML</span>
+      <span>AutoKeras</span><span>LSTM</span><span>Time Series</span><span>GeoPandas</span>
+    </div>
+
+    <div class="architecture-board">
+      <article>
+        <div class="arch-num">1</div>
+        <div class="arch-icon">◫</div>
+        <h3>Data Preprocessing</h3>
+        <ul>
+          <li>Merge outputs from multiple Atlantis simulations</li>
+          <li>Clean biomass, catch, and environmental data</li>
+          <li>Handle missing values and outliers</li>
+        </ul>
+      </article>
+
+      <div class="arch-arrow">→</div>
+
+      <article>
+        <div class="arch-num green">2</div>
+        <div class="arch-icon green-text">▦</div>
+        <h3>Feature Engineering</h3>
+        <ul>
+          <li>Lagged biomass features</li>
+          <li>Spatial and temporal features</li>
+          <li>Environmental variables and encoding</li>
+        </ul>
+      </article>
+
+      <div class="arch-arrow">→</div>
+
+      <article class="arch-primary">
+        <div class="arch-num orange">3</div>
+        <div class="arch-icon orange-text">⌘</div>
+        <h3>Prediction Model</h3>
+        <ul>
+          <li>Automated model search</li>
+          <li>Random Forest, XGBoost, LightGBM, CatBoost, Extra Trees</li>
+          <li>Extra Trees selected as best primary emulator</li>
+        </ul>
+      </article>
+
+      <div class="arch-arrow">→</div>
+
+      <article>
+        <div class="arch-num purple">4</div>
+        <div class="arch-icon purple-text">⌁</div>
+        <h3>Experimental Model</h3>
+        <ul>
+          <li>AutoKeras neural architecture search</li>
+          <li>Experimental deep-learning forecasting</li>
+          <li>LSTM-based sequential modeling</li>
+        </ul>
+      </article>
+
+      <div class="arch-arrow">→</div>
+
+      <article>
+        <div class="arch-num cyan">5</div>
+        <div class="arch-icon cyan-text">✓</div>
+        <h3>Evaluation & Validation</h3>
+        <ul>
+          <li>R², RMSE, MAE</li>
+          <li>Overall, guild, and polygon analysis</li>
+          <li>Strict temporal holdout</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- RESULTS -->
 <section id="results" class="case-section results-section">
   <div class="case-container">
     <div class="section-index">05 · RESULTS</div>
-    <h2>Strong predictive performance with emulator-scale inference speed.</h2>
-    <div class="result-grid">
-      <div class="result"><strong>95%</strong><span>Extra Trees global result reported in defense</span></div>
-      <div class="result"><strong>83–99%</strong><span>guild-level accuracy range</span></div>
-      <div class="result"><strong>~98%</strong><span>experimental forecasting result</span></div>
-      <div class="result"><strong>0.15 s</strong><span>prediction time for 277,090 samples</span></div>
+    <div class="section-heading-row">
+      <h2>Strong predictive performance with emulator-scale inference speed.</h2>
+      <p>
+        Results were evaluated globally, across ecological guilds, spatial polygons,
+        temporal holdouts, forecasting experiments, and runtime performance.
+      </p>
     </div>
 
-    <div class="figure-grid two">
-      <figure class="research-figure"><img src="marine-assets/actual-vs-predicted.jpg" alt="Overall actual versus predicted biomass plot"><figcaption>Actual vs. predicted biomass on the holdout period.</figcaption></figure>
-      <figure class="research-figure"><img src="marine-assets/runtime-result.jpg" alt="Runtime evaluation of the emulator"><figcaption>Runtime evaluation of the final AutoML-based emulator.</figcaption></figure>
+    <div class="results-grid">
+      <article>
+        <strong>95%</strong>
+        <span>Global Result</span>
+        <p>Reported global predictive performance in the thesis defense.</p>
+      </article>
+
+      <article>
+        <strong>83–99%</strong>
+        <span>Guild-level R² Range</span>
+        <p>Strong predictive accuracy across ecological guilds.</p>
+      </article>
+
+      <article>
+        <strong>~98%</strong>
+        <span>Experimental Forecasting</span>
+        <p>Overall forecasting result from the AutoKeras / LSTM experiment.</p>
+      </article>
+
+      <article>
+        <strong>0.15 s</strong>
+        <span>Inference Speed</span>
+        <p>Prediction time for 277,090 samples with the Extra Trees emulator.</p>
+      </article>
+    </div>
+
+    <div class="chart-grid">
+      <article class="chart-card">
+        <div class="chart-label">ACTUAL VS PREDICTED</div>
+        <h3>Holdout predictions remain closely aligned with observed biomass.</h3>
+        <div class="scatter-chart">
+          <div class="axis-y"></div><div class="axis-x"></div><div class="diag-line"></div>
+          <i style="left:11%;bottom:14%"></i>
+          <i style="left:18%;bottom:19%"></i>
+          <i style="left:25%;bottom:28%"></i>
+          <i style="left:34%;bottom:32%"></i>
+          <i style="left:42%;bottom:46%"></i>
+          <i style="left:51%;bottom:52%"></i>
+          <i style="left:63%;bottom:60%"></i>
+          <i style="left:71%;bottom:74%"></i>
+          <i style="left:84%;bottom:80%"></i>
+        </div>
+      </article>
+
+      <article class="chart-card">
+        <div class="chart-label">FORECASTING</div>
+        <h3>Temporal modeling captures long-term ecosystem dynamics.</h3>
+        <div class="forecast-chart">
+          <svg viewBox="0 0 520 220" role="img" aria-label="Illustrative forecasting trend">
+            <polyline points="20,180 80,160 140,145 200,115 260,128 320,92 380,70 440,56 500,62"
+                      fill="none" stroke="#48dce1" stroke-width="5" />
+            <polyline points="20,184 80,166 140,150 200,123 260,136 320,108 380,88 440,74 500,82"
+                      fill="none" stroke="#ff9b55" stroke-width="4" />
+          </svg>
+          <div class="chart-legend"><span class="actual">Actual</span><span class="pred">Predicted</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- SPATIAL -->
 <section class="case-section spatial-section">
-  <div class="case-container">
-    <div class="section-index">06 · SPATIAL GENERALIZATION</div>
-    <div class="heading-row"><h2>Performance was evaluated beyond one global score.</h2><p>The emulator was examined across individual polygons and guild × polygon combinations to reveal where predictions were strong and where ecological sparsity created harder cases.</p></div>
-    <div class="figure-grid two">
-      <figure class="research-figure"><img src="marine-assets/spatial-results.jpg" alt="Polygon-level spatial results"><figcaption>Polygon-level spatial performance.</figcaption></figure>
-      <figure class="research-figure"><img src="marine-assets/guild-polygon-accuracy.jpg" alt="Guild by polygon accuracy heatmap"><figcaption>Guild × polygon evaluation identifies both robust regions and difficult sparse combinations.</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="case-section forecast-section">
-  <div class="case-container split">
+  <div class="case-container spatial-grid">
     <div>
-      <div class="section-index">07 · FORECASTING</div>
-      <h2>Learning temporal ecosystem dynamics.</h2>
-      <p class="body-muted">Lagged biomass and time-aware features encoded ecological memory. The complementary AutoKeras experiment selected an LSTM-based approach and reported approximately 98% overall forecasting accuracy in the defense results.</p>
+      <div class="section-index">06 · SPATIAL GENERALIZATION</div>
+      <h2>Performance was evaluated beyond one global score.</h2>
+      <p class="section-copy">
+        The emulator was evaluated across individual polygons and guild × polygon combinations
+        to identify both robust regions and more difficult sparse ecological cases.
+      </p>
     </div>
-    <figure class="research-figure"><img src="marine-assets/forecasting-result.jpg" alt="Experimental forecasting result"><figcaption>Experimental forecasting result from the thesis defense.</figcaption></figure>
+
+    <div class="polygon-board">
+      <div class="poly p1">1</div><div class="poly p2">2</div><div class="poly p3">3</div><div class="poly p4">4</div>
+      <div class="poly p5">5</div><div class="poly p6">6</div><div class="poly p7">7</div><div class="poly p8">8</div>
+      <div class="poly p9">9</div><div class="poly p10">10</div><div class="poly p11">11</div><div class="poly p12">12</div>
+      <div class="poly p13">13</div><div class="poly p14">14</div><div class="poly p15">15</div><div class="poly p16">16</div>
+      <div class="poly p17">17</div><div class="poly p18">18</div><div class="poly p19">19</div><div class="poly p20">20</div>
+      <div class="poly p21">21</div><div class="poly p22">22</div>
+    </div>
   </div>
 </section>
 
+<!-- IMPACT -->
 <section id="impact" class="case-section impact-section">
   <div class="case-container">
-    <div class="section-index">08 · WHY IT MATTERS</div>
-    <h2>Surrogate modeling turns expensive simulations into rapid scientific experimentation.</h2>
-    <div class="impact-flow">
-      <div><span>Traditional</span><b>Research question</b><i>→</i><b>Run full Atlantis simulation</b><i>→</i><b>Analyze output</b></div>
-      <div class="fast"><span>Emulator</span><b>Research question</b><i>→</i><b>Trained ML surrogate</b><i>→</i><b>Rapid prediction & scenario exploration</b></div>
+    <div class="section-index">07 · WHY IT MATTERS</div>
+    <div class="section-heading-row">
+      <h2>Surrogate modeling turns expensive simulation into rapid scientific experimentation.</h2>
+      <p>
+        The emulator is designed as a computationally efficient approximation of Atlantis,
+        not as a replacement for mechanistic ecosystem science.
+      </p>
     </div>
-    <p class="impact-copy">The goal is not to replace mechanistic ecosystem models. The emulator acts as a computationally efficient approximation that can support faster biomass estimation, scenario exploration, and future decision-support workflows.</p>
+
+    <div class="impact-comparison">
+      <article>
+        <span>TRADITIONAL WORKFLOW</span>
+        <div class="flow">
+          <b>Research question</b><i>→</i><b>Run Atlantis simulation</b><i>→</i><b>Analyze output</b>
+        </div>
+      </article>
+
+      <article class="fast">
+        <span>EMULATOR WORKFLOW</span>
+        <div class="flow">
+          <b>Research question</b><i>→</i><b>Trained ML surrogate</b><i>→</i><b>Rapid scenario exploration</b>
+        </div>
+      </article>
+    </div>
+
+    <div class="impact-grid">
+      <div>✓ Faster biomass estimation after model training</div>
+      <div>✓ Rapid scenario exploration</div>
+      <div>✓ Reduced computational burden</div>
+      <div>✓ Support for fisheries and ecosystem studies</div>
+      <div>✓ Spatial and temporal model evaluation</div>
+      <div>✓ Foundation for future scientific-AI workflows</div>
+    </div>
   </div>
 </section>
 
+<!-- RESEARCH CONTEXT -->
 <section class="case-section context-section">
   <div class="case-container">
-    <div class="section-index">09 · RESEARCH CONTEXT</div>
+    <div class="section-index">08 · RESEARCH CONTEXT</div>
     <h2>Developed at the intersection of data science and fisheries oceanography.</h2>
+
     <div class="context-grid">
-      <article><span>Research home</span><h3>Fay Lab · SMAST</h3><p>Graduate Research Assistant at the School for Marine Science & Technology, UMass Dartmouth.</p><a href="https://thefaylab.github.io/people.html" target="_blank" rel="noopener">View Fay Lab profile ↗</a></article>
-      <article><span>Advisors</span><h3>Dr. Gokhan Kul & Dr. Gavin Fay</h3><p>Co-advised across Computer & Information Science and Fisheries Oceanography.</p></article>
-      <article><span>Program context</span><h3>MUST / Office of Naval Research</h3><p>The related MUST project, led by Gavin Fay, focuses on machine-learning statistical emulators for complex spatial marine ecosystem models.</p><a href="https://must.umassd.edu/projects/" target="_blank" rel="noopener">View MUST project ↗</a></article>
+      <article>
+        <span>RESEARCH HOME</span>
+        <h3>Fay Lab · SMAST</h3>
+        <p>Graduate Research Assistant at the School for Marine Science & Technology.</p>
+        <a href="https://thefaylab.github.io/people.html" target="_blank" rel="noopener">View Fay Lab profile ↗</a>
+      </article>
+
+      <article>
+        <span>ADVISORS</span>
+        <h3>Dr. Gokhan Kul & Dr. Gavin Fay</h3>
+        <p>Co-advised across Computer & Information Science and Fisheries Oceanography.</p>
+      </article>
+
+      <article>
+        <span>PROGRAM CONTEXT</span>
+        <h3>Marine and UnderSea Technology (MUST)</h3>
+        <p>Research context connected to an Office of Naval Research funded marine technology program.</p>
+        <a href="https://must.umassd.edu/projects/" target="_blank" rel="noopener">View MUST project ↗</a>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- THESIS -->
 <section class="case-section thesis-section">
   <div class="case-container thesis-card">
     <div>
-      <div class="section-index">10 · MASTER'S THESIS</div>
+      <div class="section-index">09 · MASTER'S THESIS</div>
       <h2>Emulating Marine Ecosystem Dynamics: A Machine Learning Approach for Biomass Prediction and Forecasting</h2>
-      <p>Ajmal Abbas · M.S. Data Science · University of Massachusetts Dartmouth · 2026</p>
+      <p>Ajmal Abbas · M.S. Data Science · 2026</p>
       <code>DOI: 10.62791/20585</code>
     </div>
-    <a class="case-btn primary large" href="https://doi.org/10.62791/20585" target="_blank" rel="noopener">Read the full thesis ↗</a>
+
+    <a class="case-btn primary large" href="https://doi.org/10.62791/20585" target="_blank" rel="noopener">
+      Read the Full Thesis ↗
+    </a>
   </div>
 </section>
 
-<section class="case-section final-cta">
+<!-- CTA -->
+<section class="final-cta">
   <div class="case-container">
-    <p>Scientific AI · Surrogate Modeling · Environmental Intelligence</p>
+    <div class="case-kicker">SCIENTIFIC AI · SURROGATE MODELING · ENVIRONMENTAL INTELLIGENCE</div>
     <h2>Interested in building intelligent systems for complex scientific problems?</h2>
     <div class="hero-buttons center">
       <a class="case-btn primary" href="mailto:ajmalimra.a@gmail.com">Contact Ajmal</a>
-      <a class="case-btn" href="index.html">← Back to Portfolio</a>
+      <a class="case-btn" href="https://www.linkedin.com/in/aabbas2002/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="case-btn" href="Ajmal_Abbas_Resume.pdf" target="_blank">Resume ↗</a>
+      <a class="case-btn" href="index.html">← Back to Portfolio</a>
     </div>
   </div>
 </section>
+
 </main>
-<footer class="case-footer"><div class="case-container"><span>© 2026 Ajmal Abbas</span><span>Marine Ecosystem Emulator Case Study</span></div></footer>
+
+<footer>
+  <div class="case-container footer-inner">
+    <span>© 2026 Ajmal Abbas</span>
+    <span>Marine Ecosystem Emulator · Scientific AI Case Study</span>
+  </div>
+</footer>
 </body>
 </html>
