@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.ajmalimra-a.workers.dev/sitemap.xml
