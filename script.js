@@ -21,3 +21,22 @@ document.addEventListener('keydown',e=>{
     toggle?.focus();
   }
 });
+
+/* interactive-card-parallax */
+const canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (canHover && !reduceMotion) {
+  document.querySelectorAll('.feature-card,.project-card').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width - .5) * 5;
+      const y = ((e.clientY - r.top) / r.height - .5) * -5;
+      const visual = card.querySelector('.interactive-visual,.project-visual');
+      if (visual) visual.style.transform = `translate3d(${x * .7}px,${y * .7}px,0) scale(1.015)`;
+    });
+    card.addEventListener('pointerleave', () => {
+      const visual = card.querySelector('.interactive-visual,.project-visual');
+      if (visual) visual.style.transform = '';
+    });
+  });
+}

@@ -97,7 +97,29 @@
     <div class="research-grid">
       <article class="feature-card marine-card reveal">
         <a class="card-cover-link" href="marine-emulator.html" aria-label="Open Marine Ecosystem Emulator case study"></a>
-        <div class="visual marine-visual"><div class="wave w1"></div><div class="wave w2"></div><div class="wave w3"></div></div>
+        <div class="visual marine-visual interactive-visual" aria-hidden="true">
+          <div class="ocean-grid"></div>
+          <svg class="marine-map" viewBox="0 0 760 240" preserveAspectRatio="none">
+            <path class="coast-line" d="M45,44 C120,56 152,91 205,105 C277,125 304,93 362,105 C427,118 463,157 529,145 C603,132 641,84 718,72"/>
+            <g class="polygon-net">
+              <path d="M160,72 L238,50 L290,84 L253,128 L175,120 Z"/>
+              <path d="M291,84 L365,63 L410,103 L382,147 L253,128 Z"/>
+              <path d="M410,103 L482,84 L531,121 L494,165 L382,147 Z"/>
+              <path d="M175,120 L253,128 L234,176 L151,166 Z"/>
+              <path d="M253,128 L382,147 L350,192 L234,176 Z"/>
+              <path d="M382,147 L494,165 L458,204 L350,192 Z"/>
+            </g>
+            <g class="data-points">
+              <circle cx="202" cy="95" r="5"/><circle cx="326" cy="111" r="5"/><circle cx="444" cy="132" r="5"/>
+              <circle cx="210" cy="151" r="5"/><circle cx="315" cy="161" r="5"/><circle cx="414" cy="177" r="5"/>
+            </g>
+            <path class="forecast-line" d="M210,151 C275,120 331,189 404,151 C469,117 531,141 592,104"/>
+          </svg>
+          <div class="marine-badge badge-a"><b>544</b><span>simulations</span></div>
+          <div class="marine-badge badge-b"><b>~3.4M</b><span>records</span></div>
+          <div class="marine-badge badge-c"><b>22</b><span>polygons</span></div>
+          <div class="visual-hint">Hover to explore ecosystem signals</div>
+        </div>
         <div class="card-content">
           <div class="micro-label teal">SCIENTIFIC AI · MARINE ECOSYSTEM MODELING</div>
           <h3>Emulating Marine Ecosystem Dynamics</h3>
@@ -112,7 +134,24 @@
 
       <article class="feature-card reveal">
         <a class="card-cover-link" href="trustworthy-multimodality.html" aria-label="Open Trustworthy Multimodality case study"></a>
-        <div class="visual multimodal-visual"><span>TEXT</span><span>IMAGE</span><div class="confidence">Confidence-Aware<br>Fallback</div><span>VIDEO</span></div>
+        <div class="visual multimodal-visual interactive-visual" aria-hidden="true">
+          <svg class="multi-connections" viewBox="0 0 760 240" preserveAspectRatio="none">
+            <path class="connection c1" d="M135,115 C250,115 275,116 355,120"/>
+            <path class="connection c2" d="M262,60 C325,76 334,88 374,108"/>
+            <path class="connection c3" d="M625,115 C520,115 480,116 405,120"/>
+            <path class="fallback-route" d="M381,122 C381,164 423,179 493,182"/>
+          </svg>
+          <div class="modality-node text-node"><i>TXT</i><span>TEXT</span></div>
+          <div class="modality-node image-node"><i>IMG</i><span>IMAGE</span></div>
+          <div class="modality-node video-node"><i>VID</i><span>VIDEO</span></div>
+          <div class="confidence-hub">
+            <div class="hub-ring ring-1"></div><div class="hub-ring ring-2"></div>
+            <strong>Confidence</strong><span>calibration</span>
+          </div>
+          <div class="fallback-node"><b>?</b><span>Fallback</span></div>
+          <div class="trust-score"><span>reliability</span><b>↑</b></div>
+          <div class="visual-hint">Hover to trace confidence-aware routing</div>
+        </div>
         <div class="card-content">
           <div class="micro-label violet">TRUSTWORTHY AI · MULTIMODAL LEARNING</div>
           <h3>From Weak Embeddings to Trustworthy Multimodality</h3>
@@ -135,14 +174,50 @@
     </div>
     <div class="project-grid">
       <article class="project-card reveal">
-        <a class="card-cover-link" href="ai-policy-intelligence.html" aria-label="Open AI Policy Intelligence case study"></a><div class="project-icon violet-bg">◉</div><div class="micro-label violet">AGENTIC AI</div><h3>AI Policy Intelligence Platform</h3><p>Agentic research workflow for state-level AI policy discovery, evidence extraction, claim verification, structured storage, change detection, and comparative dashboards.</p><div class="tag-row"><span>LLMs</span><span>Langflow</span><span>Streamlit</span><span>Validation</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
+        <a class="card-cover-link" href="ai-policy-intelligence.html" aria-label="Open AI Policy Intelligence case study"></a>
+        <div class="project-visual policy-mini" aria-hidden="true">
+          <div class="flow-node n-search"><b>01</b><span>SEARCH</span></div>
+          <div class="flow-node n-agent"><b>02</b><span>AGENT</span></div>
+          <div class="flow-node n-verify"><b>03</b><span>VERIFY</span></div>
+          <div class="flow-node n-db"><b>04</b><span>DB</span></div>
+          <div class="flow-node n-dash"><b>05</b><span>DASH</span></div>
+          <svg viewBox="0 0 500 150" preserveAspectRatio="none"><path class="flow-path" d="M60 76 H158 H258 H350 H438"/></svg>
+          <div class="pulse-dot p1"></div><div class="pulse-dot p2"></div>
+        </div>
+        <div class="micro-label violet">AGENTIC AI</div><h3>AI Policy Intelligence Platform</h3><p>Agentic research workflow for state-level AI policy discovery, evidence extraction, claim verification, structured storage, change detection, and comparative dashboards.</p><div class="tag-row"><span>LLMs</span><span>Langflow</span><span>Streamlit</span><span>Validation</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
       <article class="project-card reveal">
-        <a class="card-cover-link" href="geneguard-ai.html" aria-label="Open GeneGuard AI case study"></a><div class="project-icon teal-bg">✦</div><div class="micro-label teal">AI · GENOMICS</div><h3>GeneGuard AI</h3><p>Genetic disease-risk intelligence workflow combining structured family history with ClinVar and GWAS evidence for disease-specific risk analysis.</p><div class="tag-row"><span>AI Agents</span><span>GWAS</span><span>ClinVar</span><span>Genomics</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
-      <article class="project-card reveal supporting-project"><div class="project-icon blue-bg">◈</div><div class="micro-label">COMPUTER VISION · SUPPORTING PROJECT</div><h3>DeepFake Detection</h3><p>Deep-learning framework combining CNNs, LSTMs, and attention mechanisms for manipulated-video detection.</p><div class="tag-row"><span>CNN</span><span>LSTM</span><span>Attention</span><span>Video AI</span></div><div class="case-link muted">Project overview</div></article>
+        <a class="card-cover-link" href="geneguard-ai.html" aria-label="Open GeneGuard AI case study"></a>
+        <div class="project-visual gene-mini" aria-hidden="true">
+          <svg class="gene-lines" viewBox="0 0 500 170"><path d="M85 30 V72 M42 72 H128 M42 72 V108 M128 72 V108 M42 108 H22 M42 108 H64 M128 108 H108 M128 108 H148"/><path class="dna-line" d="M230 32 C285 50 285 78 230 95 C175 112 175 140 230 155 M265 32 C210 50 210 78 265 95 C320 112 320 140 265 155"/></svg>
+          <div class="person pr1"></div><div class="person pr2"></div><div class="person pr3"></div><div class="person pr4"></div>
+          <div class="risk-meter"><span>Risk signal</span><div><i></i></div><b>Explainable</b></div>
+          <div class="evidence-chip e-clin">ClinVar</div><div class="evidence-chip e-gwas">GWAS</div>
+        </div>
+        <div class="micro-label teal">AI · GENOMICS</div><h3>GeneGuard AI</h3><p>Genetic disease-risk intelligence workflow combining structured family history with ClinVar and GWAS evidence for disease-specific risk analysis.</p><div class="tag-row"><span>AI Agents</span><span>GWAS</span><span>ClinVar</span><span>Genomics</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
+      <article class="project-card reveal supporting-project"><div class="project-visual deepfake-mini" aria-hidden="true">
+          <div class="video-frame vf1"><span></span></div><div class="video-frame vf2"><span></span></div><div class="video-frame vf3"><span></span></div>
+          <div class="scan-beam"></div><div class="auth-score"><span>AUTH</span><b>?</b></div>
+          <div class="attention-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="micro-label">COMPUTER VISION · SUPPORTING PROJECT</div><h3>DeepFake Detection</h3><p>Deep-learning framework combining CNNs, LSTMs, and attention mechanisms for manipulated-video detection.</p><div class="tag-row"><span>CNN</span><span>LSTM</span><span>Attention</span><span>Video AI</span></div><div class="case-link muted">Project overview</div></article>
       <article class="project-card reveal">
-        <a class="card-cover-link" href="paddy-leaf-disease.html" aria-label="Open Paddy Leaf Disease Detection case study"></a><div class="project-icon agri-bg">⌁</div><div class="micro-label agri">COMPUTER VISION · AGRICULTURE AI</div><h3>Paddy Leaf Disease Detection</h3><p>IEEE-published deep-learning research benchmarking multiple computer-vision architectures and Detectron2 for automated rice leaf disease recognition.</p><div class="tag-row"><span>Detectron2</span><span>Deep Learning</span><span>Computer Vision</span><span>IEEE</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
+        <a class="card-cover-link" href="paddy-leaf-disease.html" aria-label="Open Paddy Leaf Disease Detection case study"></a>
+        <div class="project-visual paddy-mini" aria-hidden="true">
+          <div class="leaf-shape"></div><div class="leaf-vein"></div>
+          <div class="detection-box db1"><span>brown spot</span></div>
+          <div class="detection-box db2"></div>
+          <div class="cv-scan-line"></div>
+          <div class="accuracy-chip"><b>97%</b><span>Detectron2</span></div>
+        </div>
+        <div class="micro-label agri">COMPUTER VISION · AGRICULTURE AI</div><h3>Paddy Leaf Disease Detection</h3><p>IEEE-published deep-learning research benchmarking multiple computer-vision architectures and Detectron2 for automated rice leaf disease recognition.</p><div class="tag-row"><span>Detectron2</span><span>Deep Learning</span><span>Computer Vision</span><span>IEEE</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
       <article class="project-card reveal">
-        <a class="card-cover-link" href="vulstyle.html" aria-label="Open VulStyle vulnerability detection case study"></a><div class="project-icon warm-bg">⌘</div><div class="micro-label warm">CYBERSECURITY ML</div><h3>Vulnerability Detection</h3><p>VulStyle combines function-level code, reduced non-terminal AST structure, and code stylometry in a RoBERTa-based vulnerability detector.</p><div class="tag-row"><span>RoBERTa</span><span>AST</span><span>Stylometry</span><span>Cybersecurity ML</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
+        <a class="card-cover-link" href="vulstyle.html" aria-label="Open VulStyle vulnerability detection case study"></a>
+        <div class="project-visual vul-mini" aria-hidden="true">
+          <div class="code-pane"><span>if (ptr != NULL) {</span><span class="hot">strcpy(buf, src);</span><span>return process(ptr);</span><span>}</span></div>
+          <svg class="ast-mini" viewBox="0 0 170 150"><path d="M85 22 L42 68 M85 22 L128 68 M42 68 L24 115 M42 68 L62 115 M128 68 L107 115 M128 68 L148 115"/><circle cx="85" cy="22" r="8"/><circle cx="42" cy="68" r="7"/><circle cx="128" cy="68" r="7"/><circle cx="24" cy="115" r="6"/><circle cx="62" cy="115" r="6"/><circle cx="107" cy="115" r="6"/><circle cx="148" cy="115" r="6"/></svg>
+          <div class="vul-signal"><span>VULNERABILITY</span><b>95.06</b><small>BigVul F1</small></div>
+        </div>
+        <div class="micro-label warm">CYBERSECURITY ML</div><h3>Vulnerability Detection</h3><p>VulStyle combines function-level code, reduced non-terminal AST structure, and code stylometry in a RoBERTa-based vulnerability detector.</p><div class="tag-row"><span>RoBERTa</span><span>AST</span><span>Stylometry</span><span>Cybersecurity ML</span></div><div class="case-link">Explore case study <span>↗</span></div></article>
     </div>
   </div>
 </section>
